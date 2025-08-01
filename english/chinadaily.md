@@ -59,6 +59,7 @@
 - [ ] proceeding adj.前面的
 - [ ] prudent adj.谨慎的，节俭的
 - [ ] mobility n.流动性
+    - [ ] mobilize v.动员，调用，组织
 - [ ] revival n.复兴，重演，再流行
 - [ ] stake n.股份 v.以……打赌
 - [x] diminish v.减少，降低
@@ -491,3 +492,20 @@
 - [ ] tandem adv.同时地 n.双人自行车 adj.串联的
 - [ ] macroeconomic adj.宏观经济的
 - [ ] virtuous adj.善良的，有道德的，品行端正的
+
+## Aug 1
+
+- [ ] harness v.控制，利用 n.马具，背带
+- [ ] tactical adj.战术的，有谋略的
+- [ ] guerrilla n.游击队员
+- [ ] militia n.民兵组织，国名卫队
+- [ ] counter v.&n.反驳，抵消，抵制，计算器，计数器，柜台 adv.&adj.反对的（地），相反地
+- [ ] inferior adj.较差的，较低的 n.不如别人的人
+- [ ] tunnel n.隧道，地道 v.挖地道
+- [ ] sparrow n.麻雀
+- [ ] thwart v.阻挠，阻止
+- [ ] mop v.用拖把擦干净，用布擦
+- [ ] adhere v.粘附，秉承
+- [ ] cyber adj.电脑（网络）的
+- [ ] echo n.风气，道德思想，道德观
+- [ ] deter v.阻止，威慑，制止

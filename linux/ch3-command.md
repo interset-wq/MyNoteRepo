@@ -163,48 +163,154 @@ Linux 常用打包压缩格式“tar.gz”，因此源码包又被称为 Tarball
 
 ## 软件安装、运行与卸载
 
-3.5.1 RPM 包安装、卸载和升级
-RPM 包默认安装路径，最好不要手动指定安装路径
-/etc/
-/usr/bin/
-/usr/lib/
-/usr/share/doc/
-/usr/share/man/
-安装 RPM 包的命令格式：
-$ rpm -ivh 包全名
-涉及包全名的命令，一定要注意路径
-此命令中各选项参数的含义为：
--i 安装（install）
--v 显示更详细的信息（verbose）
--h 打印，显示安装进度（hash）
-命令还可以一次性安装多个软件包，仅需空格隔开，如下：
-$ rpm -ivh a.rpm b.rpm c.rpm
-安装完成后，可尝试启动：
-$ service 服务名 start |stop |restart |status
+### RPM 包安装、卸载和升级
+
+在 Linux 系统中，rpm 是 Red-Hat Package Manager（红帽包管理器） 的缩写，是一种用于管理软件包的工具和文件格式，主要应用于基于 Red Hat 架构的 Linux 发行版（如 CentOS、Fedora、RHEL 等）。
+
+RPM二进制包的命名须遵守统一的命名规则，用户通过名称就可以直接获取这类包的版本、适用平台等信息。
+
+RPM二进制包命名的一般格式如下：`包名-版本号-发布次数.发行商.Linux平台.适合的硬件平台.包扩展名`
+
+例如，RPM包的全名是 `httpd-2.2.15-15.el6.centos.1.i686.rpm`
+
+- httpd：软件包名。这里需要注意，httpd是包名，而httpd-2.2.15-15.el6.centos.1.i686.rpm通常称为包全名，包名和包全名是不同的，在某些Linux命令中，有些命令（如包的安装和升级）使用的是包全名，而有些命令（包的查询和卸载）使用的是包名，一不小心就会弄错。
+- 2.2.15：包的版本号。版本号的格式通常为`主版本号.次版本号.修正号`
+- 15：二进制包发布的次数，表示此RPM包是第几次编程生成的
+- el6：软件发行商。el6表示此包是由RedHat公司发布的，适合在RHEL6.x和CentOS6.x上使用
+- centos：此包适用于CentOS系统
+- 6i686：此包使用的硬件平台。目前的RPM包支持的平台
+- rpm：RPM包的扩展名。表明这是编译好的二进制包，可以使用rpm命令直接安装。此外，还有以src.rpm作为扩展名的RPM包，这表明是源代码包，需要安装生成源码，然后对其编译并生成rpm格式的包，最后才能使用rpm命令进行安装。
+
+需要说明的是，Linux系统不靠扩展名区分文件类型，这里的扩展名是为系统管理员准备的，
+如果不对RPM包标注扩展名，管理员很难知道这是一个RPM包，当然也就无法正确使用。
+
+| 硬件平台 | 说明 |
+| -------- | ---- |
+| i386 | 386以上的计算机都可以安装 |
+| i586 | 586以上的计算机都可以安装 |
+| i686 | 奔腾Ⅱ以上的计算机都可以安装，目前所有的CPU都是奔腾Ⅱ以上的，所以这个软件版本居多 |
+| X86_64 | 64位CPU可以安装 |
+| noarch | 没有硬件限制 |
+
+RPM 包默认安装路径，最好不要手动指定安装路径:
+
+    /etc/
+    /usr/bin/
+    /usr/lib/
+    /usr/share/doc/
+    /usr/share/man/
+
+RPM是通过本地的文件安装应用，并不是联网安装。
+
+#### 安装RPM包
+
+安装 RPM 包的命令格式：`$ rpm -ivh 包全名`
+
+涉及包全名的命令，一定要注意路径。此命令中各选项参数的含义为：
+
+- `-i` 安装（install）
+- `-v` 显示更详细的信息（verbose）
+- `-h` 打印，显示安装进度（hash）
+
+命令还可以一次性安装多个软件包，仅需空格隔开，如下：`$ rpm -ivh a.rpm b.rpm c.rpm`
+
+安装完成后，可尝试启动：`$ service 服务名 start |stop |restart |status`
+
 各参数含义：启动服务|停止服务|重启|查看状态
+
+#### 升级RPM包
+
 RPM 包的升级：
-$ rpm -Uvh 包全名
+
+- `$ rpm -Uvh 包全名`
+- `$ rpm -Fvh 包全名`
+
 -U 若该软件没安装过则直接安装，若已安装则升级至最新版本。
-$ rpm -Fvh 包全名
 -F 若该软件没有安装，则不会安装，必须安装较低版本才能升级。
-RPM 包的卸载要考虑包之间的依赖性，如先安装 httpd 软件包，后安装 httpd 的功能模块
-mod_ssl 包，那么卸载时，必须先卸载 mod_ssl 包，然后卸载 httpd，否则会报错。
-卸载命令格式：
-$ rpm -e 包名
+
+RPM 包的卸载要考虑包之间的依赖性，如先安装 httpd 软件包，后安装 httpd 的功能模块mod_ssl 包，那么卸载时，必须先卸载 mod_ssl 包，然后卸载 httpd，否则会报错
+
+#### 卸载RPM包
+
+卸载命令格式：`$ rpm -e 包名`
+
 -e 卸载，erase，卸载命令支持“-nocteps”选项，既可以不检测依赖性直接卸载，但不推荐
-软件包的查询
-$ rpm 选项 查询对象
--q 包名 ，表示查询是否安装，querry -qa ，查询所有已安装软件包，可以用管道符查找出需要的内容，如
-$ rpm -qa | grep httpd，采用这种方式可以找到含有包名的所有软件包。
--qi 包名， 查询软件包的详细信息，-i 表示查询软件信息，information。
--qip 包全名，-p 表示查询未安装的软件包，package。未安装的软件包需使用“绝对路径+
-包全名”的方式才能确定。
--ql 包名， 查询已安装软件包中包含的所有文件及各自安装位置。-l 表示列出软件包所有
-文件的安装目录。
--qlp 包全名，未安装软件包中包含的所有文件以及打算安装的路径。
-还支持反向查询，查询文件属于哪个 RPM 软件包：
-$ rpm -qf 系统文件名
--f 查询文件所属那个软件包，file。只有使用 RPM 安装的文件才能使用该命令，手动方式
-建立的文件无法使用
--qf /bin/ls -qR
--qRp P93
+
+#### 软件包的查询
+
+RPM软件包做查询操作，具体包括：
+
+- 查询软件包是否已安装。
+- 查询系统中所有已安装的软件包。
+- 查看软件包的详细信息。
+- 查询软件包的文件列表。
+- 查询某系统文件具体属于哪个RPM包
+
+rpm查询命令语法 `$ rpm 选项 查询对象`
+
+-q 包名 ，表示查询是否安装
+-i 表示查询软件信息，information
+-p 表示查询未安装的软件包，package
+-l 表示列出软件包所有文件的安装目录
+-f 查询文件所属那个软件包，file
+-R 查询软件包的依赖关系，requires
+
+
+`$ rpm -q 包名` 查询软件包是否安装
+
+例如：查询是否安装了Apache服务
+
+``` bash
+$ rpm -q httpd
+httpd-2.4.6-99.el7.centos.1.x86_64
+```
+
+`$ querry -qa` 查询所有已安装软件包，可以用管道符查找出需要的内容，如`$ rpm -qa | grep httpd`，采用这种方式可以找到含有httpd的所有软件包
+
+`$ rpm -qi 包名` 查询软件包的详细信息
+
+```
+$ rpm -qi httpd
+Name        : httpd
+Version     : 2.4.6
+Release     : 99.el7.centos.1
+Architecture: x86_64
+Install Date: 2025年07月22日 星期二 18时51分20秒
+Group       : System Environment/Daemons
+Size        : 9829328
+License     : ASL 2.0
+Signature   : RSA/SHA256, 2023年05月30日 星期二 23时15分45秒, Key ID 24c6a8a7f4a80eb5
+Source RPM  : httpd-2.4.6-99.el7.centos.1.src.rpm
+Build Date  : 2023年05月30日 星期二 22时02分56秒
+Build Host  : x86-01.bsys.centos.org
+Relocations : (not relocatable)
+Packager    : CentOS BuildSystem <http://bugs.centos.org>
+Vendor      : CentOS
+URL         : http://httpd.apache.org/
+Summary     : Apache HTTP Server
+Description :
+The Apache HTTP Server is a powerful, efficient, and extensible
+web server.
+```
+
+`$ rpm -qip 包全名` 查询未安装的软件包的详细信息。未安装的软件包需使用“包全名的绝对路径”的方式才能确定
+
+`$ rpm -ql 包名` 查询已安装软件包中包含的所有文件及各自安装位置
+
+`$ rpm -qlp 包全名` 未安装软件包中包含的所有文件以及打算安装的路径
+
+`$ rpm -qf 系统文件名` 反向查询，查询文件属于哪个 RPM 软件包。只有使用 RPM 安装的文件才能使用该命令，手动方式建立的文件无法使用
+
+例如：
+
+``` bash
+$ rpm -qf /bin/ls
+coreutils-8.22-23.el7.x86_64
+```
+
+`$ rpm -qR 包名` 查询某已安装软件依赖的其他包
+
+`$ rpm -qRp 包名` 查询某未安装软件依赖的其他包
+
+
+
