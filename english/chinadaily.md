@@ -505,7 +505,34 @@
 - [ ] sparrow n.麻雀
 - [ ] thwart v.阻挠，阻止
 - [ ] mop v.用拖把擦干净，用布擦
-- [ ] adhere v.粘附，秉承
+- [x] adhere v.粘附，秉承
 - [ ] cyber adj.电脑（网络）的
-- [ ] echo n.风气，道德思想，道德观
+- [x] echo n.风气，道德思想，道德观
 - [ ] deter v.阻止，威慑，制止
+
+---
+
+## Aug 3
+
+- [ ] churn v.反胃，恶心，感到不安，剧烈搅动
+- [ ] knockoff n.冒牌货，仿制品
+- [ ] adaptive adj.适应的，有适应能力的
+- [ ] prowess n.造诣，非凡的技能
+- [ ] unmatched adj.无双的，无比的
+- [ ] underpin v.加强，巩固
+- [ ] photovoltaic adj.光伏的，光电池的
+- [x] panel v.&n.嵌板，嵌条，饰片
+- [ ] steely adj.强硬的，冰冷的，似钢的
+    - [ ] steel n.钢铁，兵器 v.下决心应付 adj.坚硬的，钢铁业的
+- [x] underscore v.强调，着重说明，画下划线
+- [ ] artillery n.火炮，炮兵队伍
+- [ ] gleam v.闪烁，闪现，流露出
+- [x] dismiss v.解雇，驳回，消除，对……不屑一顾
+- [x] devise v.设计，发明，想出
+- [ ] outright adv.&adv.彻底，完全，绝对，立即
+- [ ] essence n.本质，精髓
+- [x] derive v.得到，获得，取得，起源
+- [ ] capitalize v.变现，变卖资产，为……提供运营资本，把……首字母大写
+- [x] uneven adj.不均匀的，不平坦的，无规律的
+- [ ] stagnation n.停滞，萧条，迟钝
+- [ ] 
