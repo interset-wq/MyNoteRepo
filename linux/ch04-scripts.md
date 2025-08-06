@@ -912,3 +912,220 @@ for ((expl;exp2;exp3))
 expl、exp2、exp3是3个表达式，其中exp2是判断条件，for循环根据exp2的结果来决定是否继续下一次循环；statements是循环体语句，可以有一条，也可以有多条；do和done是shell中的关键字。
 
 它的运行过程为：步骤一，执行expl；步骤二，执行exp2，如果它的判断结果是成立的，则执行循环体中的语句，否则结束整个for循环；步骤三，执行完循环体后再执行exp3；步骤四，重复执行步骤二和三，直到exp2的判断结果不成立，则结束循环。在上面的步骤中，步骤二和步骤三会重复执行，for语句的主要作用就是不断执行步骤二和三。exp1仅在第一次循环时执行，以后都不会再执行，可以认为这是一个初始化语句。exp2一般是一个关系表达式，决定了是否还要继续下次循环，称为“循环条件”。exp3很多情况下是一个带有自增或自减运算的表达式，以使循环条件逐渐变得“不成立”
+
+使用for循环计算 1 + 2 + ... + 100:
+
+``` bash
+$ vim sumfor.sh
+$ chmod u+x sumfor.sh
+$ ./sumfor.sh
+the sum is 5050
+$ cat sumfor.sh
+#! /bin/bash
+sum=0
+for (( i=0; i<=100; i++ ))
+do
+        (( sum+=i ))
+done
+echo "the sum is $sum"
+```
+
+for循环中的expl（初始化语句）、exp2（循环条件）和exp3（自增或自减）都是可选项，都可以省略（但分号；必须保留）。
+
+值表方式的for循环的用法如下：
+
+``` bash
+for variable in value_list
+do
+    statements
+done
+```
+
+variable表示变量，value_list表示取值列表，in是shell中的关键字。每次循环都会从value_list中取出一个值赋给变量variable，然后进入循环体（do和done之间的部分），执行循环体中的statements。直到取完value_list中的所有值，循环就结束了。invalue_list部分可以省略，省略后的效果相当于`in $@($*)`，变量依次取位置参数的值，然后执行循环体内的命令，直至所有的位置参数取完为止。例如：
+
+``` bash
+$ vim forloop.sh
+$ chmod u+x forloop.sh
+$ ./forloop.sh
+1
+2
+3
+4
+5
+the sum is 15
+$ cat forloop.sh
+#! /bin/bash
+sum=0
+for n in 1 2 3 4 5
+do
+        echo $n
+        (( sum+=n ))
+done
+echo "the sum is $sum"
+```
+
+下面是缺省value_list的情况，这时变量将匹配位置参数，如下：
+
+``` bash
+$ vim forloop.sh
+$ chmod u+x forloop.sh
+$ ./forloop.sh python c html css javascript
+python
+c
+html
+css
+javascript
+$ cat forloop.sh
+#! /bin/bash
+for str
+do
+        echo $str
+done
+```
+
+## select in 循环
+
+select in是shell独有的一种循环，非常适合终端这样的交互场景，是C语言所没有的。selectin循环用来增强交互性，它可以显示出带编号的菜单，用户输人不同的编号就可以选择不同的菜单，并执行不同的功能。select in循环的用法如下：
+
+``` bash
+select variable in value_list
+do
+    statements
+done
+```
+
+variable表示变量，value_list表示取值列表，in是shell中的关键字。select in和for in的语法是相似的。
+
+``` bash
+$ vim selectin.sh
+$ chmod u+x selectin.sh
+$ ./selectin.sh
+what's is your favorite os?
+1) linux
+2) windows
+3) mac
+4) android
+#? 1
+you select linux
+#? 4
+you select android
+#?
+```
+
+`#?` 用来提示用户输人菜单编号；Ctrl+D组合键，它的作用是结束select in循环。select语句取值列表value_list中的内容会以菜单的形式显示出来，用户输人菜单编号，就表示选中了某个值，这个值就会赋给变量variable，然后再执行循环体中的statements（do和done之间的部分）。每次循环时select都会要求用户输人菜单编号，并使用环境变量PS3的值作为提示符，PS3的默认值为#?，修改PS3的值就可以修改提示符。如果用户输人的菜单编号不在范围之内，例如上面输入的9，就会给variable赋一个空值；如果用户输人一个空值（什么也不输人，直接回车），会重新显示一遍菜单。需要注意，select是无限循环（死循环），输人空值，或者输入的值无效，都不会结束循环，只有遇到break语句，或者按下Ctrl+D组合键才能结束循环。
+
+select in通常和case in一起使用，在用户输人不同的编号时可以做出不同的反应。修改上面的代码，加人case in语句：
+
+``` bash
+$ ./selectin.sh
+what's is your favorite os?
+1) linux
+2) windows
+3) mac
+4) android
+#? 2
+my pc is win11
+$ cat selectin.sh
+#! /bin/bash
+echo "what's is your favorite os?"
+select name in "linux" "windows" "mac" "android"
+do
+        case $name in
+                "linux")
+                        echo "linux is opensource"
+                        break;;
+                "windows")
+                        echo "my pc is win11"
+                        break;;
+                "mac")
+                        echo "i want to buy a macbook in the future"
+                        break;;
+                "android")
+                        echo "i have an android phone"
+                        break;;
+        esac
+done
+```
+
+## break 和 continue
+
+使用while、until、for、select循环时，如果想提前结束循环（在不满足结束条件的情况下结束循环），可以使用关键字break或者continue。
+
+在C语言中，break和continue只能跳出当前或本次循环，内层循环中的break和continue对外层循环不起作用；但是shell中的break和continue却能够跳出多层循环，也就是说，内层循环中的break和continue能够跳出外层循环。不过在实际应用中，break和continue一般只用来跳出当前层次的循环，很少有需要跳出多层循环的情况。
+
+### break关键字
+
+break关键字的用法为：
+
+``` bash
+break n
+```
+
+n表示跳出循环的层数，如果省略n，则表示跳出整个循环。break关键字通常和if语句一起使用，即在满足条件时便跳出循环。
+
+### continue关键字
+
+continue关键字的用法为：
+
+``` bash
+continue n
+```
+
+n表示循环的层数，如果省略n，则表示continue只对当前层次的循环语句有效，遇到continue会跳过本次循环，忽略本次循环的剩余代码，直接进人下一次循环。如果带上n，比如n的值为2，那么continue对内层和外层循环语句都有效，不但内层会跳过本次循环，外层也会跳过本次循环，其效果相当于内层循环和外层循环同时执行了不带n的continue。continue关键字通常也和if语句一起使用，即在满足条件时便跳出循环。
+
+## shell函数
+
+shell函数的本质是一段可以重复使用的脚本代码，这段代码被提前编写好了，放在了指定的位置，使用时直接调取即可。shell中的函数和C语言中的函数类似，只是在语法细节上有所差别。
+
+### 函数定义
+
+shell函数定义的语法格式如下：
+
+``` bash
+function name() {
+    statements
+    [ return value ] 
+}
+```
+
+function是shell中的关键字，专门用来定义函数；name是函数名；statements是函数要执行的代码，也就是一组语句；returnvalue表示函数的返回值，其中return是shell的关键字，专门用在函数中返回一个值，这一部分可以写也可以不写。由一包围的部分称为函数体，调用一个函数，实际上就是执行函数体中的代码。
+
+函数定义时也可以不写function关键字，如下：
+
+``` bash
+name() {
+    statements
+    [ return value ] 
+}
+```
+
+如果写了function关键字，也可以省略函数名后面的小括号，如下：
+
+``` bash
+function name {
+    statements
+    [ return value ] 
+}
+```
+
+建议使用标准的写法，这样能够做到“见名知意”。
+
+调用shell函数时可以给它传递参数，也可以不传递。如果不传递参数，直接给出函数名字即可：
+
+``` bash
+name
+```
+
+如果传递参数，那么多个参数之间以空格分隔：
+
+``` bash
+name param1 param2 param3
+```
+
+不管是哪种形式，函数名字后面都不需要带括号。
+
+和其他编程语言不同的是，shell函数在定义时不能指明参数，但是在调用时却可以传递参数，并且给它传递什么参数它就接收什么参数。shell也不限制定义和调用的顺序，可以将定义放在调用的前面，也可以将定义放在调用的后面。
+
+### 函数参数
+
+和C语言等大部分编程语言不同，shell中的函数在定义时不能指明参数，但是在调用时却可以传递参数。函数参数是shell位置参数的一种，在函数内部可以使用`$n`来接收，例如，`$1`表示第一个参数，`$2`表示第二个参数，依次类推。除了`$n`，还有另外3个比较重要的变量：`$#`可以获取传递的参数的个数；`$@`或者`$*`可以一次性获取所有的参数（用法同shell位置参数`$*`和`$@`）。
