@@ -507,6 +507,7 @@
 - [ ] mop v.用拖把擦干净，用布擦
 - [x] adhere v.粘附，秉承
 - [ ] cyber adj.电脑（网络）的
+    - [ ] cyberspace n.网络空间，赛博空间
 - [x] echo n.风气，道德思想，道德观
 - [ ] deter v.阻止，威慑，制止
 
@@ -535,4 +536,66 @@
 - [ ] capitalize v.变现，变卖资产，为……提供运营资本，把……首字母大写
 - [x] uneven adj.不均匀的，不平坦的，无规律的
 - [ ] stagnation n.停滞，萧条，迟钝
+
+---
+
+## Aug 4
+
+- [ ] bid v.&n.投标，出价，争取
+- [x] ascend v.上升，升高，登高
+- [x] editorial n.评论 adj.编辑的，主编的
+- [ ] summon v.&n.召唤
+- [ ] sober v.变得冷静 adj.冷静的
+- [x] curb v.控制，抑制，限定 n.起控制作用的事物
+- [x] disclose v.透露，泄露
+- [ ] castrate v.阉割
+- [ ] comply v.遵守，服从
+- [x] equivalent adj.相同的，相等的 n.相等的东西
+- [ ] treasury n.财政部，宝库
+- [ ] incremental adj.增加的，递增的
+- [x] deprive v.剥夺
+- [ ] nuanced adj.细致入微的
+- [x] shipment n.运输，运送，运输的货物
+- [ ] antitrust adj.反垄断的
+
+---
+
+## Aug 5
+
+- [ ] commemorate v.纪念
+- [ ] atrocity n.残暴行为
+- [ ] compel v.迫使，强迫
+    - [ ] compelling adj.令人信服的，引人入胜的
+- [ ] notorious adj.臭名昭著的
+
+---
+
+## Aug 6
+
+- [ ] macro adj.巨大的，特别突出的，大量使用的
+- [ ] fragmentation n.碎片，片段，摘录
+- [ ] divert v.转移，使分心，使转向
+- [ ] autarchy n.自给自足，闭关自守
+- [ ] adverse adj.不利的，有害的，反面的
+- [ ] sanction n.&v.制裁，处罚，许可，批准
+- [ ] unequivocal adj.毫不含糊的，斩钉截铁的，表达明确的
+- [ ] retaliatory adj.报复性的，反击的
+- [ ] confrontation n.对抗，冲突
+- [ ] deficit n.赤字，逆差，亏损
+- [ ] underpin v.加强，巩固
+- [ ] congress n.国会
+- [ ] mitigate v.减轻，缓和
+- [ ] loom v.逼近，显得突出 
+- [ ] macroeconomic adj.宏观经济的
+- [ ] crypto n.加密货币，秘密成员
+- [ ] liquidity n.资产流动性，资产变现能力
+- [ ] vacuum n.真空，清洁，清扫 adj.真空的
+- [ ] volatile adj.不稳定的，短暂的
+- [ ] trajectory n.轨迹，轨道
+- [ ] unfold v.展开，打开，展示，透露
+- [ ] Eurasia n.欧亚大陆
+- [ ] correspond v.相当于，符合，相一致
+- [ ] projection n.预测，投影，设想
+- [ ] hegemony n.霸主，霸权国
+- [ ] arguably adv.可论证地，按理
 - [ ] 

@@ -66,7 +66,7 @@ soup = BeautifulSoup(res.text, 'lxml')
 ```py
 # print(soup.prettify())
 # 获取html的title标签，即浏览器标签页标题
-# print(soup.title)
+# print(soup.title) 
 # 获取title标签的标签名（这个属性有些鸡肋）
 # print(soup.title.name)
 # 获取title标签的文字
