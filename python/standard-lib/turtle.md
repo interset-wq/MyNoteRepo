@@ -1,14 +1,9 @@
 ---
-comments: true
-icon: material/language-python
-status: new
 title: turtle
 subtitle: 海龟绘图, 海龟的爬行足迹
 ---
 
-:material-pen-plus: `本文创建于2025-4-17`
-
-[:simple-python: turtle官方文档](https://docs.python.org/zh-cn/3.13/library/turtle.html#module-turtle){ .md-button .md-button--primary }
+[turtle官方文档](https://docs.python.org/zh-cn/3.13/library/turtle.html#module-turtle)
 
 ## 导入
 
@@ -22,3 +17,13 @@ subtitle: 海龟绘图, 海龟的爬行足迹
 - `t.backward(distance)` 函数 传入数字float类型,单位是像素 海龟后退
 - `t.left(angle)` 函数 传入数字float类型,单位角度 海龟朝逆时针方向转向
 - `t.right(angle)` 函数 传入数字float类型,单位角度 海龟朝顺时针方向转向
+- `t.color()` 传入表示颜色的字符串，切换爬行路径的颜色
+- `t.width()` 传入整数，调整线宽
+- `t.up()` 抬起画笔，不绘制路径
+- `t.down()` 放下画笔，继续绘制路径
+- `t.home()` 走直线回到起点
+- `t.pos()` 返回当前位置的坐标
+- `t.clearscreen()` 清空足迹，回到起点
+- `t.fillcolor()` 传入颜色，设置填充色
+- `t.begin_fill()` 开始使用填充色
+- `t.end_fill()` 结束使用填充色

@@ -1,7 +1,4 @@
 ---
-comments: true
-icon: material/language-python
-status: new
 title: string
 subtitle: 字符串常量
 ---

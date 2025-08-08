@@ -1,12 +1,4 @@
----
-comments: true
-icon: material/language-python
-# status: new
-title: DrissionPage
-subtitle: 浏览器自动化操作
----
-
-:material-pen-plus: `本文创建于2025-4-19`
+# DrissionPage 浏览器自动化操作
 
 [DrissionPage官方文档](https://drissionpage.cn/){ .md-button .md-button--primary }
 

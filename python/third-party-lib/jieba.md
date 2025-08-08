@@ -1,17 +1,11 @@
 ---
-comments: true
-icon: material/language-python
-# status: new
 title: jieba
 subtitle: 中文分词结巴
 ---
 
-:material-pen-plus: `本文创建于2025-6-7`
-
 [:material-github: README.md](https://github.com/fxsjy/jieba){ .md-button .md-button--primary }
 
-???+ warning
-    这个模块已无人维护, 不建议过多的学习. 掌握基本用法即可.
+> 这个模块已无人维护
 
 ## 安装
 

@@ -598,4 +598,21 @@
 - [ ] projection n.预测，投影，设想
 - [ ] hegemony n.霸主，霸权国
 - [ ] arguably adv.可论证地，按理
+
+---
+
+## Aug 7
+
+- [ ] portfolio n.文件夹，职责，职务，系列产品
+- [ ] semester n.学期
+- [ ] accordance n.符合，一致，和谐
+- [ ] exempt v.免除，豁免
+- [ ] disparity n.不同，不等，差异，悬殊
+- [ ] fluctuate v.波动，起伏不定
+- [ ] tuition n.学费，教学，指导
+- [ ] scope n.范围，机会，能力 v.仔细看，彻底检查
+- [ ] feasible adj.可行的
+- [ ] proportionate adj.成比例的，相应的 v.使适应，使成比例
+- [ ] mandatory adj.强制性的，法定的，义务的
+- [ ] rational adj.合理的，理智的 n.合理的事物
 - [ ] 
