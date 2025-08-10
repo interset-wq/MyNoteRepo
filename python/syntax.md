@@ -1,14 +1,7 @@
----
-comments: true
-icon: material/language-python
-# status: new
-title: Python基础语法
----
+# Python基础语法
 
-:material-pen-plus: `本文创建于2025-3-17`
-
-[:simple-python: 前往PEP8规范](https://peps.python.org/pep-0008/){ .md-button .md-button--primary }
-[:simple-python: 前往Python官方文档](https://docs.python.org/zh-cn/3/){ .md-button }
+[PEP8规范](https://peps.python.org/pep-0008/){ .md-button .md-button--primary }
+[Python官方文档](https://docs.python.org/zh-cn/3/){ .md-button }
 
 ## 一、注释和变量命名规范
 

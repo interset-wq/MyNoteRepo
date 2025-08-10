@@ -1,12 +1,6 @@
----
-comments: true
-title: JavaScript基础语法
-icon: material/language-javascript
----
+# JavaScript基础语法
 
-:material-pen-plus: `本文创建于2025-4-12`
-
-[:simple-mdnwebdocs: MDN权威文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript){ .md-button .md-button--primary }
+[MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
 ## 一、JavaScript简介
 

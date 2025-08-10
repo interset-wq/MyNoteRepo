@@ -13,7 +13,6 @@ print(tab2.title) # 搜索 - Microsoft 必应
 print(tab3.title) # 搜索 - Microsoft 必应
 browser.latest_tab.close() # 关闭最新的标签页
 
-# 标签页没有Selenium所谓的焦点的概念，多个标签页可以并行操作，所以可以多线程同时打开多个标签页
 
 from concurrent.futures import ThreadPoolExecutor
 

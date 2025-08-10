@@ -1,9 +1,6 @@
----
-title: jieba
-subtitle: 中文分词结巴
----
+# jieba 中文分词结巴
 
-[:material-github: README.md](https://github.com/fxsjy/jieba){ .md-button .md-button--primary }
+[README.md](https://github.com/fxsjy/jieba){ .md-button .md-button--primary }
 
 > 这个模块已无人维护
 

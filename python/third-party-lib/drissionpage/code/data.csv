@@ -1,0 +1,666 @@
+ai,dromara/EasyAi,1
+ai,drinkjava2/人工生命,1
+ai,极客学长/geekai,1
+ai,aiflowy/AIFlowy,1
+ai,Calvin/AIAS,1
+ai,ageerle/ruoyi-ai,1
+ai,常康/yolo-onnx-java,1
+ai,Dify.AI/dify,1
+ai,LangChat/langchat,1
+ai,之江天枢/Dubhe,1
+ai,MindSpore/mindformers,1
+ai,tinyflow-ai/tinyflow,1
+ai,开源中国/awesome-llm,1
+ai,xszyou/fay,1
+ai,MindSpore/mindinsight,1
+机器学习,MindSpore/mindspore,1
+机器学习,PaddlePaddle/Paddle,1
+机器学习,scruel/Notes-ML-AndrewNg,1
+机器学习,MindSpore/docs,1
+机器学习,dromara/Omega-AI,1
+机器学习,inspur-inna/inna1.0,1
+机器学习,MindSpore/community,1
+机器学习,MindSpore/course,1
+机器学习,Ascend/pytorch,1
+机器学习,飞行器智能感知与控制/machinelearning_notebook,1
+机器学习,Gitee 极速下载/tensorflow,1
+机器学习,Yener/Jiagu,1
+机器学习,PaddlePaddle/PaddleHub,1
+机器学习,Ascend/MindSpeed-RL,1
+机器学习,第四范式/OpenMLDB,1
+ai,panday/chat-master,2
+ai,Ascend/samples,2
+ai,wzpan/wukong-robot,2
+ai,百度开源/Senta,2
+ai,dromara/WGAI,2
+ai,馆主阿牛/ChatGPT-website,2
+ai,MindSpore/mindarmour,2
+ai,MindSpore/mindscience,2
+ai,PaddlePaddle/PaddleDetection,2
+ai,feiwang/Awesome-TensorFlow-Chinese,2
+ai,思通数科 StoneDT/AI多模态能力平台,2
+ai,MindSpore/serving,2
+ai,MindSpore/hub,2
+ai,Generalized_Aviation/GAAS,2
+ai,shao1chuan/pythonbook,2
+机器学习,MindSpore/mindquantum,2
+机器学习,MindSpore/akg,2
+机器学习,Daochen Zha/rlcard,2
+机器学习,lee/ml4ai,2
+机器学习,风酒/YOLO_v3_tensorflow,2
+机器学习,cmjia/MachineLearning_,2
+机器学习,时间坐标/paradox,2
+机器学习,PaddlePaddle/Paddle-Lite,2
+机器学习,Fan WenJie/LeNet-5,2
+机器学习,PaddlePaddle/PARL,2
+机器学习,Ascend/tensorflow,2
+机器学习,qieangel2013/phpml,2
+机器学习,Gitee 极速下载/tencent-angel,2
+机器学习,奇虎360/XLearning,2
+机器学习,Daochen Zha/tods,2
+ai,malaohu/wechatbot,3
+ai,zhayujie/chatgpt-on-wechat,3
+ai,科艺创想/自美人工智能系统,3
+ai,Mark Yang/breadbot,3
+ai,cungudafa/fatigue_detecting,3
+ai,小帅丶/xai,3
+ai,aizuda/easyai-plus,3
+ai,iqiar/QiarAI,3
+ai,简简aw/NewBingGoGo,3
+ai,U3W-AI/U3W-AI,3
+ai,小帅丶/taip,3
+ai,OpenSolon/solon-ai,3
+ai,Timthony/self_drive,3
+ai,Qiansou/face-java-sdk,3
+ai,PaddlePaddle/PaddleClas,3
+机器学习,TensorLayer/tensorlayer,3
+机器学习,PaddlePaddle/FastDeploy,3
+机器学习,编程语言算法集/d2l-zh,3
+机器学习,MegEngine/MegEngine,3
+机器学习,openvinotoolkit-prc/OpenVINO,3
+机器学习,Gitee 极速下载/easyml,3
+机器学习,ZzqiZQute/BPNNDemoQt,3
+机器学习,Huoyo/ndraw,3
+机器学习,Gitee 极速下载/TensorFlow.js,3
+机器学习,MindSpore/golden-stick,3
+机器学习,科大讯飞/iflearner,3
+机器学习,BaseBit.ai/XFL,3
+机器学习,华为移动服务/hms-ml-demo,3
+机器学习,Jon./hssvm,3
+机器学习,fushenshen/KuiperInferGitee,3
+ai,Adam/SmartJavaAI,4
+ai,haok2/yiwa,4
+ai,ayangweb/ChatGPT-Desktop,4
+ai,modstart-lib/aigcpanel,4
+ai,Daochen Zha/DouZero,4
+ai,withsalt/智能语音控制中心,4
+ai,monkey_cici/yolov5,4
+ai,cs-lazy-tools/ChatGPT-On-CS,4
+ai,潍坊雷鸣云网络科技有限公司/chatbot,4
+ai,CloudOrc/SolidUI,4
+ai,tinyflow-ai/tinyflow-java,4
+ai,腾讯开源/ncnn,4
+ai,hoppinzq/chatgpt-java,4
+ai,PaddlePaddle/PaddleGAN,4
+ai,Hootin/hugai-chatgpt,4
+机器学习,算法美食屋/eat_tensorflow2_in_30_days,4
+机器学习,OpenMMLab/mmdeploy,4
+机器学习,PaddlePaddle/Paddle.js,4
+机器学习,PaddlePaddle/PGL,4
+机器学习,范淼/Python机器学习及实践：从零开始通往Kaggle竞赛之路（2022年度版）,4
+机器学习,Gitee 极速下载/deeplearning4j,4
+机器学习,Apache/OpenNLP,4
+机器学习,handong/tensorflow_deploy,4
+机器学习,PaddlePaddle/PaddleFL,4
+机器学习,Gitee 极速下载/OneFlow,4
+机器学习,韩路彪/汉智,4
+机器学习,Gitee 极速下载/FATE,4
+机器学习,秦小航/DeepLearning,4
+机器学习,jajupmochi/graphkit-learn,4
+机器学习,Gitee 极速下载/tribuo,4
+ai,ApulisPlatform/Apulis AI Platform,5
+ai,肆十二/vegetables_tf2.3,5
+ai,cookeem/chatgpt-stream,5
+ai,店滴云物联网开源框架/店滴AI-人脸数据采集，识别，维护，心率算法,5
+ai,PaddlePaddle/PaddleSeg,5
+ai,MANYKIT/MinnaPhoenix,5
+ai,占书生/chatai-vue,5
+ai,未来科技集团/Jarvis_QT_NEW,5
+ai,小帅丶/人工智能,5
+ai,小浩/中药图片拍照识别系统-APP端,5
+ai,CodeGeeX/CodeGeeX,5
+ai,PaddlePaddle/PaddleX,5
+ai,cookeem/chatgpt-service,5
+ai,SwanHubX/SwanLab,5
+ai,GuoChengJie/SuperSQL,5
+机器学习,Gitee 极速下载/Tinn,5
+机器学习,Cambricon/torch_mlu,5
+机器学习,KareEnges/pytorch CNN识别奥特曼,5
+机器学习,Gitee 极速下载/deeplearn-js,5
+机器学习,Ascend/openmind,5
+机器学习,PaddlePaddle/X2Paddle,5
+机器学习,之江天枢/OneFlow,5
+机器学习,zmh-program/Deeptrain,5
+机器学习,Gitee 极速下载/ElasticDL,5
+机器学习,Apache/tvm,5
+机器学习,WeBank/eggroll,5
+机器学习,NVIDIA_Developer_Community/DIGITS,5
+机器学习,Ascend/MindSpeed-Core-MS,5
+机器学习,京东零售/Galileo,5
+机器学习,马登军/CNTK,5
+ai,Ascend/CATLASS,6
+ai,OSC源创会/AI学习,6
+ai,dreamsfly/ WeaveNet,6
+ai,Ascend/msit,6
+ai,WeBank/FATE,6
+ai,cungudafa/keras-yolo3,6
+ai,icybee/icyChessZero,6
+ai,Ascend/mstt,6
+ai,夜半饿得慌/beauty,6
+ai,雨花石/FastGPT,6
+ai,Victor/chat-ollama,6
+ai,Chatopera/Synonyms,6
+ai,Angus/chat-plus,6
+ai,大腹太卷/Lane_Detection,6
+ai,兰博文/GPT_Assistant_Android,6
+机器学习,PaddlePaddle/Paddle2ONNX,6
+机器学习,Hans/infers,6
+机器学习,FlipTurn/bustag,6
+机器学习,算法美食屋/torchkeras,6
+机器学习,fQwQf/faQnet,6
+机器学习,TensorLayer/dcgan,6
+机器学习,高艳鹏/GPT2-chitchat,6
+机器学习,dreamsfly/CNNSharp,6
+机器学习,TensorLayer/RLzoo,6
+机器学习,VIT/基于深度学习的商品识别系统的设计与实现,6
+机器学习,WenkeHuang/ML-Quantamental,6
+机器学习,Gitee 极速下载/openai-gym,6
+机器学习,OpenDILab开源决策智能平台/DI-orchestrator,6
+机器学习,Huey Song/Plane_RL,6
+机器学习,PaddlePaddle/edl,6
+ai,Ascend/mindsdk-referenceapps,7
+ai,PaddlePaddle/models,7
+ai,Vanishi/xclabel,7
+ai,feiwang/Awesome-Chatbot,7
+ai,乔永刚/AI创作系统cahtgpt聊天系统小程序PC端,7
+ai,CHB/profile-tags,7
+ai,Gtr/chatgpt-java,7
+ai,1595901624/Gpt聚合版,7
+ai,star/calculator,7
+ai,ModelArts/ModelArts-Lab,7
+ai,OpenDocCN/ailearning,7
+ai,yh/ai-chat-open,7
+ai,AvenirTech 未来科技/Honinbo,7
+ai,rnchg/APT,7
+ai,letsmagic/magic,7
+机器学习,Gitee 极速下载/Horovod,7
+机器学习,Gitee 极速下载/GraphPipe,7
+机器学习,PaddlePaddle/AutoDL,7
+机器学习,MindSpore/mindrlhf,7
+机器学习,FengGo/I-ReaxFF,7
+机器学习,科大讯飞/iflearner-flow,7
+机器学习,wwy/Machine_Learning_research_on_simple_target_recognition_and_intention_analysis,7
+机器学习,MindSpore Lab/mindrl,7
+机器学习,Gitee 极速下载/ai_choreographer,7
+机器学习,DeepPSP/torch_ecg,7
+机器学习,泰斯特/Amazing-AI,7
+机器学习,Gitee 极速下载/rasa,7
+机器学习,Apache/Mahout,7
+机器学习,Gitee 极速下载/LineFlow,7
+机器学习,mumulin/libalgdeploy-hi3559a,7
+ai,livingbody/AutoCutout,8
+ai,Ascend/cann-ops-adv,8
+ai,OpenHarmony/ai_engine,8
+ai,DeepSpark/DeepSparkInference,8
+ai,andyham/RSPapers,8
+ai,国家一级失眠/attendanceFaceDemo,8
+ai,Gitee 极速下载/openpilot,8
+ai,Ascend/RecSDK,8
+ai,zghgchao/Netflix-Recommender-with-Spark,8
+ai,Gitee 极速下载/ollama,8
+ai,imi 开发组/imi-ai,8
+ai,开源中国/LLM Map,8
+ai,DeepSpark/DeepSparkHub,8
+ai,PaddlePaddle/PaddleRec,8
+ai,PaddlePaddle/VisualDL,8
+机器学习,Gitee 极速下载/MMLSpark,8
+机器学习,PaddlePaddle/PaddleHelix,8
+机器学习,toniz/deeplab-on-ios,8
+机器学习,idrl/idrlnet,8
+机器学习,spr_prg/TensorFlow-Examples,8
+机器学习,Gitee 极速下载/deeplearning4j-examples,8
+机器学习,yuanbo-peng/Neural-Networks,8
+机器学习,awesome-lib/awesome-machine-learning,8
+机器学习,OpenMMLab/mmrazor,8
+机器学习,AliyunContainerService/ai-starter,8
+机器学习,Hank/build_a_neural_network_from_scratch,8
+机器学习,高艳鹏/dgl,8
+机器学习,Cambricon/CNStream,8
+机器学习,盗理者/machinelearningapidemo,8
+机器学习,Gitee 极速下载/linfa,8
+ai,灵易/MLBot,9
+ai,adai.design/homemaster.v1,9
+ai,zm/multibot-chat,9
+ai,TensorLayer/hyperpose,9
+ai,omniai/omni_infer,9
+ai,小铭同学/WeClone,9
+ai,邓振华/AI智能识物（微信小程序）,9
+ai,广州小橘灯信息科技有限公司/nexfly,9
+ai,陈轩大魔王/Neuroevolution_T-rex,9
+ai,Bd999/Recognize.js,9
+ai,夜半饿得慌/KnifeREC,9
+ai,源宝网络/baoaiback,9
+ai,Chatopera/efaqa-corpus-zh,9
+ai,包建强/FastOCRLabel,9
+ai,Ascend/cann-ops,9
+机器学习,Gitee 极速下载/Coach,9
+机器学习,Gitee 极速下载/lightnet,9
+机器学习,seanXYZ/SegDecNet,9
+机器学习,mirrors_Qihoo360/tensornet,9
+机器学习,mumulin/algmodelconvert,9
+机器学习,KumaTea/pytorch-aarch64,9
+机器学习,新无止竞/MNN,9
+机器学习,gexing/pytorch实现bert做seq2seq任务,9
+机器学习,Gitee 极速下载/ElasticRec,9
+机器学习,PaddlePaddle/PaddleTS,9
+机器学习,Gitee 极速下载/PostgresML,9
+机器学习,TorchEI/TorchEI,9
+机器学习,Gitee 极速下载/emll,9
+机器学习,jeusgao/jobot_factory_simple_nlp,9
+机器学习,Apache/Hivemall,9
+ai,PaddlePaddle/ERNIE,10
+ai,Ascend/torchair,10
+ai,科大讯飞/aiges,10
+ai,Gitee 极速下载/mediapipe,10
+ai,modelbox/modelbox,10
+ai,OAL/Tengine,10
+ai,顾真牛/ai00_rwkv_server,10
+ai,Gitee 极速下载/Automagica,10
+ai,DGW/spiderTmallTradeInfo,10
+ai,磨牙棒/HzsparrowAI,10
+ai,OpenDILab开源决策智能平台/DI-engine,10
+ai,wuzhihao7788/yolodet-pytorch,10
+ai,程序员小白条/智能 AI 旅游推荐平台前台,10
+ai,Alibaba/spring-ai-alibaba,10
+ai,PaddlePaddle/PaddleSlim,10
+机器学习,Jide-Qian/mxnet,10
+机器学习,sg-first/公司渠道评估模型,10
+机器学习,科学大数据开源社区/pDeep,10
+机器学习,soldatJiang/robot-grasp-detection,10
+机器学习,openvinotoolkit-prc/MMAction,10
+机器学习,jlxing/caffe,10
+机器学习,openvinotoolkit-prc/deep-object-reid,10
+机器学习,Leon/Pytorch2TensorRT,10
+机器学习,OSS Compass 开源指南针/compass-web,10
+机器学习,Berry/ACSCP_cGAN,10
+机器学习,Berry/mscnn,10
+机器学习,OAL/AutoKernel,10
+机器学习,PaddlePaddle/Fleet,10
+机器学习,越努力越幸运/cnn-explainer,10
+机器学习,Gitee 极速下载/rasa-sdk,10
+ai,feiwang/TensorFlow-Bitcoin-Robot,11
+ai,JJZHK-AI/AIKnowledgeBase,11
+ai,PaddlePaddle/PaddleVideo,11
+ai,神经猫/EasyPR-native,11
+ai,RT-Thread-Mirror/nnom,11
+ai,Cambricon/pytorch_modelzoo,11
+ai,CANN/acl,11
+ai,UnicomAI/wanwu,11
+ai,dog-qiuqiu/MobileNetv2-YOLOV3,11
+ai,康恒/ctpn,11
+ai,Ascend/ascendc-api-adv,11
+ai,源宝网络/baoaifront,11
+ai,科大讯飞/MiniRBT,11
+ai,Ascend/triton-ascend,11
+ai,Gitee 极速下载/Cherry-Studio,11
+机器学习,Gitee 极速下载/sk-dist,11
+机器学习,TensorLayer/srgan,11
+机器学习,TensorLayer/cyclegan,11
+机器学习,Gitee 极速下载/TensorLayer,11
+机器学习,PaddlePaddle/hapi,11
+机器学习,Tencent/Forward,11
+机器学习,Gitee 极速下载/tabml,11
+机器学习,hazdzz/GCN,11
+机器学习,richybai/SEQNN,11
+机器学习,HJ Research Group/torchplus,11
+机器学习,Gitee 极速下载/lingvo,11
+机器学习,Gitee 极速下载/BMTrain,11
+机器学习,shuaihhx/horovod,11
+机器学习,Lee Lup Yuen 李立源/tflite-bl602,11
+机器学习,Halk/tensorflow-models,11
+ai,北京智云视图科技有限公司/HyperLabelImg,12
+ai,kerlomz/captcha_platform,12
+ai,祝威廉/byzer-llm,12
+ai,万改称才/QQRobot,12
+ai,Baihai IDP/IDP,12
+ai,小帅丶/x-ai,12
+ai,RLMaster陈常鸿/强化学习,12
+ai,PaddlePaddle/PGL,12
+ai,Gitee 极速下载/breadAI,12
+ai,zhangrg/dify-java-client,12
+ai,非洲挖井队之猎天/langchat,12
+ai,mirrors_microsoft/Bringing-Old-Photos-Back-to-Life,12
+ai,头上有煎饺/Defect-Detection-with-tensorflow,12
+ai,青简问对 | 文脉千年待君询/青简问对,12
+ai,松鼠Quant/ssquant-ai,12
+机器学习,openvinotoolkit-prc/nncf_pytorch,12
+机器学习,openvinotoolkit-prc/nncf,12
+机器学习,AX0424/MegEngine,12
+机器学习,新无止竞/darknet,12
+机器学习,topnetfish/Production-Level-Deep-Learning,12
+机器学习,Microsoft/TensorFlow-DirectML,12
+机器学习,techrc/senkuu,12
+机器学习,Gently/deepsort,12
+机器学习,HMH12456/Reranker,12
+机器学习,openvinotoolkit-prc/DeepVariant,12
+机器学习,uyb/dezero-example,12
+机器学习,Alibaba/FederatedScope,12
+机器学习,Gitee 极速下载/HeFlwr,12
+机器学习,Alibaba/LucaProt,12
+机器学习,Xorbits/xorbits,12
+ai,shopping/yolo_v5_nnie,13
+ai,PaddlePaddle/Serving,13
+ai,极限实验室 (INFINI Labs)/coco-app,13
+ai,Yesterday/MindSPONGE,13
+ai,刘潇/Sa-Reversi,13
+ai,supermy/dmn-rest,13
+ai,PaddlePaddle/ElasticCTR,13
+ai,Veasion/aippt,13
+ai,P4ul/cu-bridge,13
+ai,ppnt/tauri-qwen,13
+ai,lovaster/text_detection,13
+ai,张尉东/GraphMapReduce,13
+ai,AIDotNet/OpenDeepWiki,13
+ai,ThE_eXpLoReR/CANNDY,13
+ai,百度开源/familia,13
+机器学习,jlxing/Deep-Learning-for-Tracking-and-Detection,13
+机器学习,Gitee 极速下载/TIM-VX,13
+机器学习,myhub/MLP,13
+机器学习,"Li John, Gen/dnn_gan",13
+机器学习,openvinotoolkit-prc/MMAction2,13
+机器学习,OpenDILab开源决策智能平台/DI-hpc,13
+机器学习,DiDi-opensource/hetsann,13
+机器学习,饺子大魔王/lookie-lookie,13
+机器学习,1k树/submarine,13
+机器学习,Gitee 极速下载/mldb,13
+机器学习,DiDi-opensource/dlflow,13
+机器学习,Nine7Eyes/oneflow,13
+机器学习,Bytedance Inc./primus,13
+机器学习,RitchieAlpha/nnUNet,13
+机器学习,饺子大魔王/tfjs-models,13
+ai,Gitee 极速下载/easyrec,14
+ai,refly-ai/refly,14
+ai,DeepSpark/DeepSpark,14
+ai,南寻/NewPy,14
+ai,Xorbits/inference,14
+ai,枫言风语/coolwrite,14
+ai,peridyno/peridyno,14
+ai,Martin/AICharacterHub,14
+ai,Gitee 极速下载/txtai,14
+ai,Ascend/ascend-transformer-boost,14
+ai,玄道公子/digital_recognition_with_neuron_network,14
+ai,Bytedance Inc./deer-flow,14
+ai,Gitee 极速下载/LangChain,14
+ai,Gitee 极速下载/scikit-learn,14
+ai,算能/tpu-mlir,14
+机器学习,Heimu11/deep-voice-conversion,14
+机器学习,高艳鹏/gpt2-ml,14
+ai,Saisimon/AIMindMap,15
+ai,linzhong/BigGAN,15
+ai,Gitee 极速下载/Xinference,15
+ai,ppnt/tauri-deepseek,15
+ai,极品新/识图AI（接入百度AI平台）,15
+ai,ZzqiZQute/ELMDemoQt,15
+ai,潍坊雷鸣云网络科技有限公司/aichat,15
+ai,CV_Lab/Streamlit-YOLOv5-Modle2X,15
+ai,黄睿/python语言天气预测,15
+ai,Yesterday/Cybertron,15
+ai,damone/darknet2ncnn,15
+ai,007lz/基于虚拟体和人工势场相结合的多智能体编队控制方法,15
+ai,alinesno-infrastructure/alinesno-infra-platform-press,15
+ai,虚神疯/ai-chat-local,15
+ai,PaddlePaddle/PaddleScience,15
+ai,jink2005/AISEntry,16
+ai,Gitee 极速下载/Mask_RCNN,16
+ai,李碧豪/乐思赋能平台,16
+ai,Gitee 极速下载/twitter-algorithm,16
+ai,luge-ai/luge-ai,16
+ai,Thoughtworks/EmoPy,16
+ai,summer2zz/TextCommentSentimentAnalysis,16
+ai,Liereyy/Satori,16
+ai,MetaX-MACA/modelzoo,16
+ai,Gitee 极速下载/VisualChatGPT,16
+ai,jiaxiaogang/he4o,16
+ai,董硕/tensorflow_models_nets,16
+ai,10km/caffe-static,16
+ai,openEuler/euler-copilot-framework,16
+ai,大寒/GAN生成动漫头像,16
+ai,Gitee 极速下载/olivia,17
+ai,felixchina/moneyprinterturbo,17
+ai,wannian/nlplab-platform,17
+ai,惊奇漫画/Brouhaha,17
+ai,hazdzz/STGCN,17
+ai,MindSpore Lab/mindformers,17
+ai,吴斌/AI4SDGs项目，心理健康对话系统研究,17
+ai,1991wangliang/springboot-starter-gemini,17
+ai,Gitee 极速下载/fastllm,17
+ai,AIDotNet/auto-prompt,17
+ai,Liu Jie/anyi,17
+ai,丶谢锐彬/chatgpt-wechat,17
+ai,xuelanghanbao/AI4XDE,17
+ai,10cl/chatdev,17
+ai,monkey_cici/labelImg,17
+ai,westwood/蚁群算法,18
+ai,火鸟/EasyMovie电影TensorFlow推荐系统,18
+ai,诺墨/bob-plugin-giteeai-translate,18
+ai,ForEleven/osc-robot,18
+ai,罗瑶光/德塔论文集,18
+ai,MindSpore Lab/mindrec,18
+ai,邓振华/dc-aichat（一款支持ChatGPT+智谱AI+讯飞星火+书生浦语大模型+Kimi.ai+MoonshotAI+豆包AI等大模型的AIGC源码）,18
+ai,jiaxiaogang/HELIX_THEORY,18
+ai,Gitee 极速下载/DeepChat,18
+ai,曹真/homework_3,18
+ai,monkeywind/AI金融,18
+ai,啊biu/MindIEAscendDeploy,18
+ai,DeepSpark/ixGDB,18
+ai,isekOS/ISEK,18
+ai,luanyu/GPT-WEB-JAVA,18
+ai,Gitee 极速下载/OpenNE,19
+ai,Gitee 极速下载/mindsdb,19
+ai,Gitee 极速下载/CubeAI,19
+ai,AIDotNet/Thor,19
+ai,OpenDILab开源决策智能平台/treevalue,19
+ai,明故为知/FashionAI,19
+ai,Gitee 极速下载/recommenders,19
+ai,huangyr/Spark_ALS,19
+ai,Gitee 极速下载/Pyro,19
+ai,PaddlePaddle/PLSC,19
+ai,YangYunQiao/AIChat,19
+ai,openEuler/modelengine,19
+ai,kangvcar/ais,19
+ai,HumanAIGC-Engineering/OpenAvatarChat,19
+ai,knownsec/aipyapp,19
+ai,MindSpore Lab/mindpet,20
+ai,Corki/利用openface进行人脸识别签到,20
+ai,OpenDILab开源决策智能平台/DI-treetensor,20
+ai,Gitee 极速下载/Deep-Painterly-Harmonization,20
+ai,祝威廉/auto-coder,20
+ai,Gitee 极速下载/GraphVite,20
+ai,OpenMMLab/mmclassification,20
+ai,DevChat/DevChat,20
+ai,高艳鹏/GPT2-Chinese,20
+ai,Ascend/ascend-hccl-controller,20
+ai,Ascend/vision,20
+ai,一枚假程序猿/AICore,20
+ai,william_lzw/StableDiffusionTorchSharp,20
+ai,MindSpore Lab/mindone,20
+ai,Gitee 极速下载/AudioGPT,20
+ai,river/AI,21
+ai,Gitee 极速下载/prediction,21
+ai,Gitee 极速下载/Gluon-API,21
+ai,Gitee 极速下载/plato-research-dialogue-system,21
+ai,A.Star算法组/snowland-algorithm-python,21
+ai,Linius/dcnn-nlp,21
+ai,maple/darknet_GPS,21
+ai,百晓通客栈/BXTRobot-Client,21
+ai,CANN/cann-halo,21
+ai,LockzhinerAI/LockzhinerVisionModule,21
+ai,winx96/ChatGPT-PRO,21
+ai,cryscan/web-rwkv,21
+ai,ModelArts/ModelArts-Ascend,21
+ai,极客时间/TensorFlow-Course,21
+ai,科大讯飞/Chinese-BERT-wwm,21
+ai,weitec/MLiA_StudyCode,22
+ai,dreamsfly/DenseCRFSharp,22
+ai,布客飞龙/ml-for-humans-zh,22
+ai,justmd5/tencent-ai,22
+ai,maple/SafeHatDetect,22
+ai,Luxonis-Brian/depthai,22
+ai,Gitee 极速下载/Clause,22
+ai,felixchina/wiseflow,22
+ai,LXMT/Vitis-AI,22
+ai,Gitee 极速下载/DocsGPT,22
+ai,MindSpore Lab/mindaudio,22
+ai,unit-mesh/auto-dev,22
+ai,liwanwan/forex-prediction,22
+ai,Gitee 极速下载/superagi,22
+ai,wzxprince/WzxKingdom,22
+ai,qieangel2013/phpword2vec,23
+ai,Gitee 极速下载/infer-net,23
+ai,cgoxopx/ANN_vhdl,23
+ai,天桥底下说书的/douyin,23
+ai,khs1994-php/tencent-ai,23
+ai,action-tech/sql-llm-benchmark,23
+ai,Ah_伟/PicDifferent,23
+ai,人生几何/mnist_pytorch,23
+ai,GPUStack/llama-box,23
+ai,杨不易呀/yuanqi-sdk-java,23
+ai,布客飞龙/fastai-ml-dl-notes-zh,23
+ai,twm/ChatGPT,23
+ai,rWySp/mmtracking,23
+ai,高艳鹏/transformer-xl-chinese,23
+ai,Lingra/HewGem数字人,23
+ai,Gitee 极速下载/breadbot,24
+ai,Gitee 极速下载/Darkon,24
+ai,FlagTree/flagtree,24
+ai,夢裏的黃金屋/GFPGAN,24
+ai,data_factory/lobe-chat,24
+ai,WindyDance/BullShitGenerator2.0,24
+ai,ksdhy/AI背景去除,24
+ai,hazdzz/ChebyNet,24
+ai,Hamm/OllamaK,24
+ai,anolis/keenopt,24
+ai,LLL2343/softwarecup,24
+ai,xiaobai/IntelliFlow,24
+ai,Gitee 极速下载/SimAM,24
+ai,科大讯飞/Chinese-ELECTRA,24
+ai,Ascend/Mind-KernelInfra,24
+ai,Gitee 极速下载/UGATIT,25
+ai,singsingasong/Standard LSTM Modal,25
+ai,zengfr繁荣/SVM-Neuro-Matching,25
+ai,ski133/PytorchTest,25
+ai,任亚军/HiYoyo,25
+ai,GPUStack/gguf-parser-go,25
+ai,热门极速下载/fauxpilot,25
+ai,Gitee 极速下载/hmgnn,25
+ai,LazyAGI/LazyLLM,25
+ai,MetaX-MACA/mxmaca-courses,25
+ai,Gitee 极速下载/Syn2Real,25
+ai,FDSKEY/ScalaBaiduStyleArticleGen,25
+ai,WenkeHuang/yolo3-keras,25
+ai,Apache/horn,25
+ai,wanlin_cai/InterpretableMLBook,25
+ai,Gitee 极速下载/presidio,26
+ai,Gitee 极速下载/tensor2tensor,26
+ai,TensorLayer/openpose-plus,26
+ai,Chaaaaaaaaaa/ncnn,26
+ai,Ion/Dive-into-DL-PyTorch,26
+ai,GanjinZero/Tenpai_prediction,26
+ai,TracyCuiq/DCNN_NI_CG_Forensic,26
+ai,Rainweic/GluonConverter,26
+ai,xAsiimov/ImageNST,26
+ai,Gitee 极速下载/Naive Bayesian Classifier,26
+ai,戴彬/TwoStageVAE,26
+ai,Gitee 极速下载/Face-tracking-with-Anime-characters,26
+ai,寶/Keras-image-classifer-framework,26
+ai,小浩/tensorflow-model,26
+ai,子沐/zwhx,26
+ai,小帅丶/deeplearning4j,27
+ai,91JPPX/ROSNXT_SDK,27
+ai,Luoge/ExeLibSVM,27
+ai,KVCache.AI/Mooncake,27
+ai,AlbertDarren/FPGA-AI,27
+ai,Alibaba/rtp-llm,27
+ai,183600/ChatStep,27
+ai,可立/llm-pretraining,27
+ai,Gitee 极速下载/5ire,27
+ai,青简问对 | 文脉千年待君询/溪云谱韵,27
+ai,你的假大叔/XiaoXing-robot,27
+ai,nethinker/gpt-code-clippy,27
+ai,Tommy/Gear Train Python,27
+ai,anydev/screenpipe,27
+ai,陈佳豪/openLuckClovers,27
+ai,modelbox/modelbox-book,28
+ai,叶建平/deeplearning,28
+ai,modelbox/modelbox-webui,28
+ai,OpenDILab开源决策智能平台/DI-store,28
+ai,哎哟喂/chatGPT,28
+ai,罗瑶光/Deta_Catalytic_DNA,28
+ai,dubochao/ATEAC,28
+ai,Gitee 极速下载/MSC,28
+ai,Bytedance Inc./monolith,28
+ai,Gitee 极速下载/GPTNeo,28
+ai,咯咯咯/基于飞桨的高校人流量识别和查询系统-网页端,28
+ai,Gitee 极速下载/UGATIT-pytorch,28
+ai,百度开源/ernie-unimo,28
+ai,Gitee 极速下载/Gemini-CLI,28
+ai,MetaX-MACA/mcTVM,28
+ai,x00e0d991e368/lazero,29
+ai,蒋茂苇/LLM-Robotics-example-TidyBot,29
+ai,随风/midjourney-proxy,29
+ai,科大讯飞/Chinese-XLNet,29
+ai,西酞普斯/MindQA,29
+ai,铂金小猪/moarkService,29
+ai,强哥/dify,29
+ai,MetaX-MACA/vLLM-metax,29
+ai,Xorbits/xllamacpp,29
+ai,piaolingzxh/supersonic,29
+ai,MetaX-MACA/DeepEP,29
+ai,amaozhao/casher,29
+ai,AIDotNet/AutoGpt,29
+ai,Alibaba/nann,29
+ai,357027361/agent-zero,29
+ai,Alibaba/pilotscope,30
+ai,Wang Xin/labelme2yolo,30
+ai,kk/一个热衷于用人工智能创造美好事物的团队,30
+ai,王威/零一万物代码,30
+ai,Gitee 极速下载/genai,30
+ai,Buuugx/ncnn,30
+ai,阮豪/Text-Generate-RNN,30
+ai,mizunomk/flash-attention,30
+ai,doycode/Metis,30
+ai,Xorbits/mars,30
+ai,Xorbits/inference-client,30
+ai,朱林/Qwen-Agent,30
+ai,国泰海通证券股份有限公司/lingxiMCP,30
+ai,RexHuang936/gemini-cli,30
+ai,CPLABonus/cherry-studio,30
+ai,B1INGO/refly,31
+ai,Veeja.liu/ultralytics,31
+ai,Gitee 极速下载/google-pegasus,31
+ai,Martin_Z_He/fast-style-transfer,31
+ai,wuqingshan2010/ncnn,31
+ai,科大讯飞/TextPruner,31
+ai,MegEngine/mgeconvert,31
+ai,DiDi-opensource/heteta,31
+ai,DiDi-opensource/MEEP,31
+ai,QLHua001/mmaction,31
+ai,DiDi-opensource/paladin,31
+ai,yangfeng/densepose,31
+ai,田德宇/City Intelligence,31
+ai,科大讯飞/cmrc2018,31
+ai,热门极速下载/parti,31
+ai,coda/朴素贝叶斯预测kaggle泰坦尼克号,32
+ai,91JPPX/ROSNXTROBOT,32
+ai,Gitee 极速下载/NapkinML,32
+ai,Haozhe Xie/mitagger,32
