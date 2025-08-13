@@ -1,10 +1,9 @@
-"""冒泡排序 
+"""冒泡排序 时间复杂度平方阶
 例如 从小到大排序列表 nums = [4, 3, 2, 1] 最坏情况
 第一趟 
     3, 4, 2, 1
     3, 2, 4, 1
     3, 2, 1, 4
-    4 的下标从0-1-2-3
 第二趟
     2, 3, 1, 4
     2, 1, 3, 4
@@ -25,7 +24,6 @@ def bubble(nums: list) -> list:
             if nums[j] > nums[j + 1]:
                 nums[j], nums[j + 1] = nums[j + 1], nums[j]
     return nums
-
 
 if __name__ == '__main__':
     nums = [4, 3, 2, 1]
