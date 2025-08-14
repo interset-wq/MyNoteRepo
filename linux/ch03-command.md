@@ -2,18 +2,16 @@
 
 ## Linux 命令提示符
 
-命令提示符：
-
 - root用户 `[root@localhost ~]#`
-- 普通用户 `[d111kc@localhost ~]$`
+- 普通用户 `[d111kc@localhost Desktop]$`
 
 命令提示符的说明：
 
-- `root`和`d11kc` 表示当前的登陆用户
-- `@`是分隔符号，没有特殊含义
-- `localhost`：当前系统的主机名（完整名 `localhost.localdommain`），主机名是电脑的设备名，自定义设备名之后显示的不是localhost
-- `~`：用户文件夹（家目录），root用户的用户文件夹是 `/root`，普通用户的用户文件夹是 `/home/<username>`，打开终端时默认进入的是家目录，`~`这个位置显示的是当前所在目录
-- `#` 和 `$`：命令提示符，root用户是 `#`，普通用户是 `$`
+- `root` 和 `d11kc` 表示当前的登陆用户
+- `@` 是分隔符号，没有特殊含义
+- `localhost` 当前系统的主机名（`localhost`完整名 `localhost.localdommain`），主机名是电脑的设备名，自定义设备名之后显示的不是`localhost`
+- `~` 和 `Desktop` 当前所在目录 `~` 特指用户文件夹（家目录/主目录），root用户的用户文件夹是 `/root`，普通用户的用户文件夹是 `/home/<username>`，打开终端时默认进入的是家目录
+- `#` 和 `$` 命令提示符，root用户是 `#`，普通用户是 `$`
 
 ## Linux 命令的基本格式
 
@@ -24,17 +22,25 @@ Linux 选项：
 - 短格式选项 为英文简写，以 `-` 开头
 - 长格式选项 为完整英文单词，以 `--` 开头
 
-例如：这个例子使用的是wsl Ubuntu
-
 ``` bash
-$ ls
-note1.txt  test1
-$ ls -l
-total 4
--rw-r--r-- 1 d111kc d111kc    0 Jul 30 21:05 note1.txt
-drwxr-xr-x 2 d111kc d111kc 4096 Jul 30 21:04 test1
-$ ls --all
-.  ..  .bash_history  .bash_logout  .bashrc  .cache  .landscape  .motd_shown  .profile  note1.txt  test1
+[d111kc@localhost ~]$ ls
+Desktop    Downloads  Pictures  Templates
+Documents  Music      Public    Videos
+[d111kc@localhost ~]$ ls -l
+总用量 0
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Desktop
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Documents
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Downloads
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Music
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Pictures
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Public
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Templates
+drwxr-xr-x. 2 d111kc d111kc 6 8月  13 16:45 Videos
+[d111kc@localhost ~]$ ls --all
+.              .bashrc  Desktop    .ICEauthority  Pictures
+..             .cache   Documents  .local         Public
+.bash_logout   .config  Downloads  .mozilla       Templates
+.bash_profile  .dbus    .esd_auth  Music          Videos
 ```
 
 `ls` 可以不传参，是因为它有默认参数，那就是当前所在目录

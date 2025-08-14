@@ -40,12 +40,12 @@ Linux系统通过网络接口访问NIC。对每一个识别出的NIC，内核都
 ``` bash
 $ ifconfig -a
 ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.219.128  netmask 255.255.255.0  broadcast 192.168.219.255
-        inet6 fe80::8c99:5020:397d:9ae  prefixlen 64  scopeid 0x20<link>
-        ether 00:0c:29:82:3e:d7  txqueuelen 1000  (Ethernet)
-        RX packets 111014  bytes 39988126 (38.1 MiB)
+        inet 192.168.27.128  netmask 255.255.255.0  broadcast 192.168.27.255
+        inet6 fe80::5f44:5a23:6d7:6307  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:46:28:49  txqueuelen 1000  (Ethernet)
+        RX packets 1772  bytes 1890195 (1.8 MiB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 143159  bytes 39539839 (37.7 MiB)
+        TX packets 1292  bytes 290100 (283.3 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
@@ -59,31 +59,48 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
-        ether 52:54:00:ae:c3:a4  txqueuelen 1000  (Ethernet)
+        ether 52:54:00:1f:ed:88  txqueuelen 1000  (Ethernet)
         RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 virbr0-nic: flags=4098<BROADCAST,MULTICAST>  mtu 1500
-        ether 52:54:00:ae:c3:a4  txqueuelen 1000  (Ethernet)
+        ether 52:54:00:1f:ed:88  txqueuelen 1000  (Ethernet)
         RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-接口eth0目前处于活跃状态，并已被配置了IP地址192.168.3.128（后面会有详细的讨论）。
-接口eth1目前没有关联的IP地址，处于不活跃状态。
-接口lo指的是回环接口（loopbackinterface），它是由Linux内核实现的专用虚拟接口。使用
-回环接口传输的网络数据包可使用同一接口接收，并不需要连接到真正的网络。回环接口是允
-许联网客户程序连接在同一台机器上运行的联网服务。
-ifconfig命令如果不附加-a选项，就只能报告活跃的接口。例如，如果没有-a选项，那么在
-前面的输出中就不会出现eth1。
+接口eth33目前处于活跃状态，并已被配置了IP地址192.168.27.128
+
+接口lo指的是回环接口（loopbackinterface），它是由Linux内核实现的专用虚拟接口。使用回环接口传输的网络数据包可使用同一接口接收，并不需要连接到真正的网络。回环接口是允许联网客户程序连接在同一台机器上运行的联网服务。
+
+ifconfig命令如果不附加-a选项，就只能报告活跃的接口。
 
 ### 用 ifconfig 命令配置网络接口
-ifconfig 查看相关网卡信息
-1. 接口配置文件
+
+用户应该为接口配置恰当的联网信息，比如IP地址和子网掩码。在Linux系统中可用ifconfig命令来完成这些操作。ifconfig命令的基本格式如下：
+
+``` bash
+$ ifconfig 接口名 [选项] [地址]
+```
+
+和大多数Linux命令不同，在这里许多选项要用关键词来指定，而不是用标准命令行选项语法。下面列出一些在ifconfig命令中比较常用的选项关键词。
+
+选项：
+
+- up:激活接口。
+- down：使接口无效。
+- netmaskaddr：用addr指定的子网掩码。
+- hw addr：将设备的硬件（也就是MAC）地址设为addr。
+- mtu limit：将接口的MTU（MaximumTransferUnit）设为limit。
+
+使用ifconfig命令可激活给出的网络接口，也可使之无效，或为其分配IP地址。
+
+### 接口配置文件
+
 linux 接口激活----/etc/init.d/network
 linux 接口配置文件----/etc/sysconfig/network-scripts
 Linux 系统采用更普遍的方法来配置网络接口，即根据目录/etc/sysconfig/network-scripts/
