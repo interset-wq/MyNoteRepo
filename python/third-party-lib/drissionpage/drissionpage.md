@@ -1,6 +1,6 @@
 # DrissionPage 浏览器自动化操作
 
-[DrissionPage官方文档](https://drissionpage.cn/){ .md-button .md-button--primary }
+[DrissionPage官方文档](https://drissionpage.cn/)
 
 ## 两个核心的类
 
