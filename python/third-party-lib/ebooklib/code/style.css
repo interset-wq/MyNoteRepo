@@ -1,0 +1,33 @@
+@namespace epub "http://www.idpf.org/2007/ops";
+
+h1, h2, h3 {
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
+}
+
+p {
+    padding: 10px 5px;
+}
+
+ol {
+    list-style-type: none;
+}
+
+ol > li:first-child {
+    margin-top: 0.3em;
+}
+
+
+nav[epub|type~='toc'] > ol > li > ol  {
+    list-style-type:square;
+    color: blue;
+}
+
+
+nav[epub|type~='toc'] > ol > li > ol > li {
+    margin-top: 0.3em;
+    color: green;
+}
+

@@ -1,6 +1,6 @@
 # bs4 解析网页
 
-[bs4官方文档](https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/)
+[bs4官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
 
 ## 安装
 
@@ -40,54 +40,7 @@
     - 速度慢
     - 额外的 Python 依赖
 
-```py
-import requests
-from bs4 import BeautifulSoup
-
-url = 'http://127.0.0.1:5500/docs/demos/bs4-demo.html'
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0',
-}
-
-res = requests.get(url=url, headers=headers)
-# res.encoding = 'utf-8'
-# print(res.text)
-
-# 创建soup对象
-soup = BeautifulSoup(res.text, 'lxml')
-```
-
 ## 第二步：对soup对象进行操作
-
-```py
-# print(soup.prettify())
-# 获取html的title标签，即浏览器标签页标题
-# print(soup.title) 
-# 获取title标签的标签名（这个属性有些鸡肋）
-# print(soup.title.name)
-# 获取title标签的文字
-# print(soup.title.string)
-# 获取title标签的父标签
-# print(soup.title.parent)
-# 获取title标签的父标签名
-# print(soup.title.parent.name)
-# 获取第一个h2标签
-# print(soup.h2)
-# 获取第一个h2标签的id
-# print(soup.h2['id'])
-# print(soup.h2.get('id'))
-# 获取第一个h2标签的所有属性
-# print(soup.h2.attrs)
-# 获取第一个h2标签的class属性，由于class多值属性，返回列表
-# print(soup.h2['class']) # 或使用get()方法
-# print(soup.h2.get('class'))
-# 获取所有的h2标签，返回列表
-# print(soup.find_all('h2'))
-# 获取id值是author的标签，返回列表（注意class不能使用这种用法）
-# print(soup.find_all(id='author'))
-# 获取网页所有的文本内容
-# print(soup.get_text())
-```
 
 soup对象的属性和方法：
 
