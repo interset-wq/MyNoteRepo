@@ -1,12 +1,4 @@
----
-comments: true
-# icon: simple/git
-# status: new
-title: Linux 常用操作
-# subtitle: 算法和数据结构
----
-
-:material-pen-plus: `本文创建于2025-7-16`
+# Linux 常用操作
 
 ## 一、快捷键
 
