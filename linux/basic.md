@@ -16,7 +16,7 @@ Linux严格区分大小写，所有目录和文件名都要区分大小写
 - HOME目录指：用户在系统内的专属目录，类似于Windows的用户文件夹
 - Linux终端（命令行）启动后默认将HOME目录作为当前工作的目录，类似于Windows powershell和cmd打开后命令提示符显示的路径是用户文件夹
 
-## Linux命令的基础格式
+## Linux命令的基本格式
 
 `command [-options] [parameter]`
 
