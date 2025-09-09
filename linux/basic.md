@@ -63,7 +63,7 @@ cd，即Change Directory，功能：切换工作目录
 
 每一个用户在Linux系统中都有自己的专属工作目录，称之为HOME目录。
 
-- 普通用户的HOME目录，默认在：`/home/用户名`，home目录的命令提示符是 `~`
+- 普通用户的HOME目录，默认在：`/home/用户名`，home目录可以用 `~` 表示
 
 - root用户的HOME目录，在：`/root`
 
