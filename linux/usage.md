@@ -90,6 +90,7 @@ Ubuntu系统使用 `apt [-y] [install remove search] 软件名称`
 功能：控制系统服务的启动关闭等
 
 Linux系统很多软件（内置或第三方）均支持使用systemctl命令控制：启动、停止、开机自启
+
 能够被systemctl管理的软件，一般也称之为：服务
 
 系统内置的服务比较多，比如：
