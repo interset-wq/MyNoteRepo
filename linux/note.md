@@ -1,9 +1,11 @@
 # 知识点整理
 
 ## 第1章 计算机体系结构与操作系统
+
 ### 1.1 计算科学与计算机系统
+
 1. 冯诺依曼体系的结构要点:
-   - 计算机数制采用二进制,程序指令和数据统一存储,计算机应按照程序顺序执行｡按照冯 诺依曼结构设计的计算机由控制器,运算器,存储器和输入设备,输出设备五部分组成｡
+   - 计算机数制采用二进制,程序指令和数据统一存储,计算机应按照程序顺序执行｡按照冯诺依曼结构设计的计算机由控制器,运算器,存储器和输入设备,输出设备五部分组成｡
    - 控制器和运算器构成现代通用计算机系统的中央处理器(CPU,central processing unit),即传统的单核CPU｡
    - 在主存储器中实现存入要执行的程序和要处理的数据,运行时CPU 将自动并按顺序从主存储器中取出指令一条一条执行｡冯诺依曼结构的计算机系统映射现实世界的时空观,存储体系对应空间域,指令顺序执行过程对应时间域｡
 
@@ -24,9 +26,10 @@
    - 第4 层:汇编语言层
    - 第5 层:高级语言层
    - 第6 层:应用程序层｡
-3. 计算机系统结构设计者所关心的是(机器语言或汇编语言程序员)所看到的计算机结构｡
+3. 计算机系统结构设计者所关心的是机器语言或汇编语言程序员所看到的计算机结构｡
 
 #### 1.2.3 指令集
+
 1. 指令集是一个计算机系统支持的所有机器指令的集合,它常常被看作软硬件之间的分界面｡
 2. 计算机中最普通的指令格式是:操作码+操作数(地址)｡用二进制数据来表示｡
 3. 根据操作数的数量不同,可以将指令格式分为:零地址指令,一地址指令､二地址指令､三地址指令和多地址指令｡
@@ -54,6 +57,7 @@
 11. 虚拟存储系统的提出是为了满足应用程序对高速大容量主存的需求,扩大存储系统容量,速度慢｡"主存-辅存"层次的存储管理技术称为虚拟存储管理技术｡
 
 ### 1.3 微处理器体系结构
+
 1. 微处理器,即中央处理器CPU 是计算机系统中最重要､最核心的部件｡
 2. CPU 单核处理器基本逻辑结构,主要由控制器､运算器和存储单元三部分组成,这三部份由CPU 内部总线相连｡
 3. 目前,通用处理器芯片基本上都采用了多核处理器(Chip Multi-Processor,CMP)架构｡
@@ -61,11 +65,13 @@
 4. CPU 指令执行过程基本上包含5 个阶段:取指令､指令译码､执行指令､访存取数､结果写回｡
 
 ### 1.4 操作系统的基本概念
+
 1. 操作系统是通用计算机系统中不可或缺的系统软件｡
 2. 计算机系统的资源按照其作用可大致分为四类:处理器､存储器､I/O 设备和文件｡
 3. 对这四类资源的管理就是操作系统内核的主要功能｡
 
 #### 1.4.2 操作系统的基本特征
+
 现代通用操作系统一般具有并发､共享､虚拟和异步这四个基本特征｡
 - 并发是指两个或多个事件在同一时间间隔内发生｡
 - 共享是指计算机系统中的软硬件资源可被多个并发执行的进程共同使用,而不是被一个进程所独占｡
@@ -73,12 +79,15 @@
 - 异步又称随机性或不确定性,异步是指在相同的计算机环境和初始条件下,在同一数据集上运行的同一程序每次执行的顺序和所需时间都不一定相同｡(避免混淆:并行是指两个或多个事件在同一时刻发生)
 
 ### 1.5 操作系统的基本功能和原理
-1. 从资源管理的角度来看,操作系统具备五大基本功能:处理器管理､存储管理､设备管理､文件管理和作业管理｡
+
+从资源管理的角度来看,操作系统具备五大基本功能:处理器管理､存储管理､设备管理､文件管理和作业管理｡
 
 #### 1.5.1 处理器管理
-1. 处理器管理的功能主要有两个:中断处理和进程管理｡
+
+处理器管理的功能主要有两个:中断处理和进程管理｡
 
 ##### 1.5.1.1 中断处理
+
 1. 在处理器上运行的指令,根据权限可分为两种:
    - 特权指令:只能被操作系统内核使用的指令,这些指令设计改变机器状态､修改寄存器内容､启动设备等敏感操作｡
    - 非特权指令:所有程序都能使同的指令｡
@@ -97,6 +106,7 @@
    - (5)访管中断:执行"访问管理程序"指令产生,使CPU 从用户态转入管理态,为用户程序提供系统资源服务(如配置通道的系统中,用户程序I/O 请求引起的中断)｡
 
 ##### 1.5.1.2 进程管理
+
 1. 进程是计算机中的程序在某数据集合上的一次运行活动,是系统进行资源分配和调度的基本单位｡
 2. 进程和程序的联系与区别:
    - 进程是动态概念,程序是静态概念;
@@ -113,55 +123,79 @@
 6. 就绪态特征:已获得除CPU 以外的所有运行所需资源｡
 
 #### 1.5.2 存储管理
+
 1. 将用户源程序变为可在内存中执行的程序步骤:编译,链接,装入｡
 2. 存储器管理主要功能:内存空间的分配与回收,地址转换,内存空间的扩充和存储保护｡
 
 #### 1.5.3 设备管理
+
 设备管理模块主要负责处理器内核与外部设备间的数据交互,包括把设备分配给某个请求使用该设备的进程,处理CPU 和设备间I/O 通信,响应设备的中断请求,维护和回收设备等｡
 
 #### 1.5.4 文件管理
+
 1. 负责文件管理的部分称为文件系统,功能包括文件的逻辑组织和物理组织､目录结构和管理等｡
 2. 常用文件物理结构有顺序结构､链表结构､索引结构｡
 
 #### 1.5.5 作业管理
+
 1. 作业:用户在一次计算过程中或一个事务处理中要求计算机系统所作工作的总和,是用户向计算机系统提交任务的基本单位｡
 2. 作业管理内容:作业的输入和输出,以及作业的调度和控制｡
 3. 作业的状态:从提交到结束退出系统,经历提交､后备､执行和完成4 个状态｡
 
 ## 第2章 Linux 系统概述
+
 1. Linus Torvalds 负责开发的Linux 只是一个内核｡内核指的是一个提供设备驱动､文件系统､进程管理､网络通信等功能的系统软件,内核并不是一套完整的操作系统,只是操作系统的核心｡
 2. Linux 发行版本:Red Hat､Debian Linux､Fedora Core､CentOS､Ubuntu Linux､SuSE Linux､Gentoo Linux､Slackware｡
 3. 2019 年截止,世界超级计算机500 强上运行的都是Linux｡安卓系统是基于Linux 的开源系统,是Google 公司为移动终端打造的真正开放和完整的移动软件｡亚马逊云､阿里云､谷歌云都部署在Linux 系统上｡人工智能和区块链的底层也都是Linux｡
 
 ## 第3章 Linux 系统使用基础
+
 ### 3.3 常用Linux 命令
+
 #### 3.3.1 Linux 命令的基本格式
+
 1. 打开shell 方式:"开始"菜单中选择应用程序-附件-终端,命令提示符格式:`[root@localhost ~]# `
-   - root:当前登录用户;
-   - localhost:当前系统的简写主机名(完整名localhost.localdommain);
-   - ~:用户当前所在目录;
-   - #:命令提示符(超级用户为#,普通用户为$)｡
-2. 家目录(主目录):用户登录后的初始位置,超级用户家目录为/root,普通用户家目录为/home/用户名;初始登录状态下,用户创建的文件默认放入家目录;切换目录命令是cd｡
-3. Linux 命令的基本格式:[root@localhost ~]# 命令[选项] [参数]
+   - `root`:当前登录用户;
+   - `localhost`:当前系统的简写主机名(完整名localhost.localdommain);
+   - `~`:用户当前所在目录;
+   - `#`:命令提示符(超级用户为#,普通用户为$)｡
+2. 家目录(主目录):用户登录后的初始位置,超级用户家目录为`/root`,普通用户家目录为`/home/用户名`;初始登录状态下,用户创建的文件默认放入家目录;切换目录命令是cd｡
+3. Linux 命令的基本格式: `命令 [选项] [参数]`
    - 选项:分为短格式选项(-l,英文简写)和长格式选项(--all,完整英文单词),用于调整命令执行方式;
    - 参数:命令的操作对象｡
 
 #### 3.3.2 Linux 简单命令
+
 ##### 3.3.2.1 w 和who 命令
+
 1. 功能:均用于查看服务器上已登陆的用户信息;区别是w 命令还能显示每个用户执行任务的情况｡
-2. w 命令基本格式:[root@localhost ~]# w [选项] [用户名]
+2. w 命令基本格式: `w [选项] [用户名]`
    - 仅跟用户名:只显示该用户信息;
    - 选项:-h(不显示输出标题)､-l(详细格式输出)､-s(简洁格式输出)｡
-3. who 命令基本格式:[root@localhost ~]# who [选项] [file]
+
+``` bash
+$ w
+ 22:48:41 up 17 min,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+d111kc   pts/1    -                22:33   15:17   0.01s  0.01s -bash
+```
+
+1. who 命令基本格式: `who [选项] [file]`
    - 无指定文件:默认通过/var/run/utmp 文件获取登录用户信息;
    - 选项:-a(列出所有信息,相当于所有选项)､-b(列出系统最近启动时间)､-l(列出所有可登录终端信息)､-m(仅列出当前终端信息,相当于who am I)､-s(仅显示名称､线路和时间字段,默认选项)｡
 
+``` bash
+$ who
+d111kc   pts/1        2025-09-10 22:33
+```
+
 ##### 3.3.2.2 echo 命令
+
 1. 功能:将命令行中的参数显示到标准输出(屏幕)上｡
-2. 命令格式:[root@localhost ~]# echo [选项] [输出内容]
+2. 命令格式: `echo [选项] [输出内容]`
 3. 选项:
    - -n:取消输出后行末的换行符号(内容输出后不换行);
-   - -e:支持反斜线控制的字符转换｡
+   - -e:使用转义字符
 4. -e 选项支持的控制字符:
    - \\:输出\本身;
    - \a:输出警告音;
@@ -175,41 +209,70 @@
    - \v:垂直制表符;
    - \0nnn:按八进制ASCII 码表输出字符;
    - \xhh:按十六进制ASCII 码表输出字符｡
-5. 示例:[root@localhost ~]# echo -e "a \tb \tc \nd\te \tf" (输出含制表符和换行符的内容)｡
+
+``` bash
+$ echo -e "hello\nworld"
+hello
+world
+$ echo "hello\nworld"
+hello\nworld
+```
 
 ##### 3.3.2.3 date 命令
+
 1. 功能:显示或设定系统的日期与时间｡
-2. 设定时间格式:[root@localhost ~]# date -s 时间值(仅root 权限可设置)｡
+2. 设定时间格式: `date -s 时间值` (仅root 权限可设置)｡
 
 ##### 3.3.2.4 passwd 命令
+
 1. 功能:密码配置指令｡
-2. 基本格式:[root@localhost ~]# passwd [选项] 用户名
+2. 基本格式: `passwd [选项] 用户名`
 3. 权限规则:
    - 普通用户:仅能修改自己的密码,需先输入旧密码;
    - 超级用户(root):可修改自己和普通用户的密码,无需输入旧密码｡
 
+``` bash
+$ passwd
+Changing password for d111kc.
+Current password:
+New password:
+Retype new password:
+passwd: password updated successfully
+```
+
 ### 3.4 软件包
+
 1. Linux 的软件包分类:源码包和二进制包｡
 2. 源码包:因常用打包压缩格式为"tar.gz",故又称Tarball(Tarball 是打包工具)｡
 3. 二进制包管理系统:两大主流——RPM 包管理系统､DPKG 包管理系统｡
 
-### 3.5 软件安装､运行与卸载
+### 3.5 本地软件安装､运行与卸载
+
 #### 3.5.1 RPM 包安装､卸载和升级
-1. RPM 包默认安装路径:/etc/､/usr/bin/､/usr/lib/､/usr/share/doc/､/usr/share/man/(建议不手动指定安装路径)｡
-2. RPM 包安装命令格式:[root@localhost ~]# rpm -ivh 包全名
+
+在 Linux 系统中，rpm 是 Red-Hat Package Manager（红帽包管理器） 的缩写，是一种用于管理软件包的工具和文件格式，主要应用于基于 Red Hat 架构的 Linux 发行版（如 CentOS、Fedora、RHEL 等）。
+
+RPM二进制包的命名须遵守统一的命名规则，用户通过名称就可以直接获取这类包的版本、适用平台等信息。
+
+RPM二进制包命名的一般格式如下：`包名-版本号-发布次数.发行商.Linux平台.适合的硬件平台.包扩展名`
+
+例如，RPM包的全名是 `httpd-2.2.15-15.el6.centos.1.i686.rpm`
+
+1. RPM 包默认安装路径:`/etc/`､`/usr/bin/`､`/usr/lib/`､`/usr/share/doc/`､`/usr/share/man/`(建议不手动指定安装路径)｡
+2. RPM 包安装命令格式: `rpm -ivh 包全名`
    - 选项含义:-i(安装,install)､-v(显示详细信息,verbose)､-h(显示安装进度,hash);
-   - 批量安装:空格分隔多个包,如[root@localhost ~]# rpm -ivh a.rpm b.rpm c.rpm｡
-3. 安装后启动服务:[root@localhost ~]# service 服务名start | stop | restart | status
+   - 批量安装:空格分隔多个包,如 `rpm -ivh a.rpm b.rpm c.rpm`
+3. 安装后启动服务: `service 服务名 start | stop | restart | status`
    - 参数含义:start(启动)､stop(停止)､restart(重启)､status(查看状态)｡
 4. RPM 包升级:
-   - [root@localhost ~]# rpm -Uvh 包全名:若软件未安装则直接安装,若已安装则升级至最新版本(-U 选项);
-   - [root@localhost ~]# rpm -Fvh 包全名:仅升级已安装的软件,未安装则不操作(-F 选项)｡
+   - `rpm -Uvh 包全名`:若软件未安装则直接安装,若已安装则升级至最新版本(-U 选项);
+   - `rpm -Fvh 包全名`:仅升级已安装的软件,未安装则不操作(-F 选项)｡
 5. RPM 包卸载:
    - 注意事项:需考虑包之间的依赖性(如先装httpd,后装mod_ssl,卸载时需先卸mod_ssl,再卸httpd);
-   - 命令格式:[root@localhost ~]# rpm -e 包名(-e:卸载,erase);
+   - 命令格式: `rpm -e 包名` (-e:卸载,erase);
    - 可选选项:"-nocteps":不检测依赖性直接卸载(不推荐)｡
 6. 软件包查询:
-   - 命令格式:[root@localhost ~]# rpm 选项 查询对象;
+   - 命令格式: `rpm 选项 查询对象`
    - 常用选项:
      - -q 包名:查询是否安装(querry);
      - -qa:查询所有已安装软件包(可搭配管道符,如[root@localhost ~]# rpm -qa | grep httpd);
@@ -220,13 +283,29 @@
      - -qf 系统文件名:反向查询文件所属的RPM 包(-f:file,仅RPM 安装的文件可用),如[root@localhost ~]# rpm -qf /bin/ls｡
 
 ## 第4章 shell 脚本编程基础
+
 ### 4.1 shell 编程概述
+
 1. shell 本质:用C 语言编写的程序,是连接用户和UNIX/Linux 内核的桥梁｡
-2. 脚本头部标识:#!/bin/bash:放在脚本第一行,指定脚本使用的shell,用于调用相应解释程序执行｡
+2. 脚本头部标识:`#!/bin/bash`:放在脚本第一行,指定脚本使用的shell,用于调用相应解释程序执行｡
 3. 注释符:#:单行注释符,用于说明程序功能､结构､算法和变量作用,增加可读性｡
-4. 脚本执行前提:Linux 中创建文件默认不可执行,需修改文件权限(增加可执行权限)后,在命令行输入相对路径./文件名运行｡
-5. 创建文件命令:[root@localhost ~]# touch 文件名｡
-6. 查看shell 种类:[root@localhost ~]# cat /etc/shell｡
+4. 脚本执行前提:Linux 中创建文件默认不可执行,需修改文件权限(增加可执行权限)后,在命令行输入相对路径`./文件名`运行｡
+5. 创建文件命令: `touch 文件名`
+6. 查看shell 种类: `cat /etc/shells`
+
+``` bash
+$ cat /etc/shells 
+# /etc/shells: valid login shells
+/bin/sh
+/usr/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/dash
+/usr/bin/tmux
+```
+
 7. 命令/脚本执行与PATH 环境变量的关系:
    - PATH 环境变量的作用:决定shell 到哪些目录中寻找命令或可执行程序;
    - 运行命令/程序时,shell 按PATH 目录顺序依次搜寻｡
@@ -236,34 +315,95 @@
    - 将脚本以输入重定向的方式传递给bash｡
 
 ### 4.2 shell 基础
+
 #### 4.2.1 通配符
+
 1. 通配(Globbing):文件名的扩展功能｡
 2. 常用通配符:
-   - *:匹配任意字符的0 次或多次出现;
-   - ?:匹配任意单个字符;
-   - [ ]:匹配该字符组限定的任何一个字符;
-   - [^ ] 或[! ]:匹配不在该字符组中的任何一个字符;
-   - {string1,string2,……}:匹配其中一个指定的字符串｡
+   - `*`:匹配任意字符的0 次或多次出现;
+   - `?`:匹配任意单个字符;
+   - `[ ]`:匹配该字符组限定的任何一个字符;
+   - `[^ ]` 或`[! ]`:匹配不在该字符组中的任何一个字符;
+   - `{string1,string2,...}`:匹配其中一个指定的字符串｡
+
+``` bash
+$ ls
+chapter  chapter1  chapter123  oschapter1
+$ ls chapter[0-9]*
+chapter1:
+
+chapter123:
+```
 
 #### 4.2.2 引号与转义字符
+
 1. 转义字符"\":按下前,特殊字符按特殊含义执行;按下后,特殊字符按普通含义执行｡
 2. shell 中的3 种引用字符:
    - 单引号:引用的所有字符均为普通字符,无特殊含义;
    - 双引号:保留"$"(引用变量值)､"\"(转义)和倒引号"`"(引用命令)的特殊含义;
    - 倒引号:引用的字符被解释为命令行,shell 先执行该命令,并以输出结果取代倒引号部分｡
 
+``` bash
+$ echo `pwd`
+/mnt/e/MyNoteRepo/linux/temp
+```
+
 #### 4.2.3 输入/输出重定向符
-1. 输入/输出方向:数据的流动方向｡
+
+输入/输出方向:数据的流动方向｡
 
 ##### 4.2.3.1 标准输入重定向
-- 1. command < file:将文件作为命令的输入,如[root@localhost ~]# wc -l < file(统计file 文件行数);
-- 2. command << 分界符:从标准输入读入,直到遇见分界符停止(替代默认的Ctrl+D 结束输入)｡
+
+- `command < file`:将文件作为命令的输入
+
+``` bash
+$ cat hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md*
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 h5/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:34 linux/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 math/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 other/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 powershell/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 python/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:30 reference/
+$ wc -l < hello.txt 
+18
+```
+
+- 2. `command << 分界符`:从标准输入读入,直到遇见分界符停止(替代默认的Ctrl+D 结束输入)｡
 
 ##### 4.2.3.2 标准输出重定向
-- 1. command > file:以覆盖方式,将command 的正确输出写入file(文件不存在则创建,存在则覆盖原内容),如[root@localhost ~]# cat file1 file2 > file3;
-- 2. command >> file:以追加方式,将command 的正确输出写入file｡
+- `command > file`:以覆盖方式,将command 的正确输出写入file(文件不存在则创建,存在则覆盖原内容)
+- `command >> file`:以追加方式,将command 的正确输出写入file｡
+
+``` bash
+$ echo hello > file1
+$ echo world > file2
+$ echo "hello linux" >> file2
+$ cat file1 file2 > file3
+$ cat file1
+hello
+$ cat file2
+world
+hello linux
+$ cat file3
+hello
+world
+hello linux
+```
 
 ##### 4.2.3.3 文件描述符
+
 - 定义:输出重定向完整写法为fd>file 或fd>>file,fd 为文件描述符,默认不写为1;
 - 常用文件描述符:
   - 标准输入(stdin):0;
@@ -275,11 +415,13 @@
   - [root@localhost ~]# ls -l > /dev/null(输出重定向到/dev/null,数据被丢弃,无法恢复)｡
 
 #### 4.2.4 命令执行操作符
+
 1. 顺序执行:用";"连接多条命令,依次执行｡
 2. 逻辑与("&&"):仅当前一条命令正确执行时,后一条命令才执行｡
 3. 逻辑或("||"):仅当前一条命令执行错误时,后一条命令才执行｡
 
 #### 4.2.5 小括号和大括号
+
 1. shell 类型:
    - 交互shell:启动后等待用户输入命令,执行完显示提示符;
    - 非交互shell:运行外部命令或脚本时,交互shell 创建的子shell,运行结束后子shell 进程结束｡
@@ -287,18 +429,96 @@
 3. 后台进程:运行过程中不响应用户输入和终端控制信号,但结果仍可能输出到显示器｡
 
 ## 第5章 用户管理
+
 ### 5.1 用户与用户组管理
-1. 用户名和ID 对应关系存储文件:/etc/passwd｡
-2. 用户主目录创建规则:默认情况下,管理员创建用户时,在/home 目录下创建用户主目录｡
-3. 用户密码信息存储目录:/etc｡
+
+1. 用户名和ID 对应关系存储文件:/etc/passwd
+
+``` bash
+$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:996:996:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
+syslog:x:102:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:991:991:systemd Resolver:/:/usr/sbin/nologin
+uuidd:x:103:103::/run/uuidd:/usr/sbin/nologin
+landscape:x:104:105::/var/lib/landscape:/usr/sbin/nologin
+polkitd:x:990:990:User for polkitd:/:/usr/sbin/nologin
+d111kc:x:1000:1000:,,,:/home/d111kc:/bin/bash
+postgres:x:105:109:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+postfix:x:106:110::/var/spool/postfix:/usr/sbin/nologin
+sshd:x:107:65534::/run/sshd:/usr/sbin/nologin
+```
+
+2. 用户主目录创建规则:默认情况下,管理员创建用户时,在`/home` 目录下创建用户主目录｡
+3. 用户密码信息存储目录:/etc
 
 ### 5.2 用户和用户组管理相关的文件
-1. 文件权限:
-   - /etc/passwd(用户基本信息):权限为rw-r--r--;
-   - /etc/shadow(用户密码信息):权限为rw-------｡
+
+文件权限:
+
+- /etc/passwd(用户基本信息):权限为rw-r--r--
+- /etc/shadow(用户密码信息):权限为rw-------
+
+``` bash
+$ sudo cat /etc/shadow
+[sudo] password for d111kc: 
+root:$y$j9T$p3soBj08aYrVMxMB60k9Q.$FTWVh8JDB45bJnCbewcKfz7XtnZM17yyqzVTEYS6KN/:20313:0:99999:7:::
+daemon:*:20094:0:99999:7:::
+bin:*:20094:0:99999:7:::
+sys:*:20094:0:99999:7:::
+sync:*:20094:0:99999:7:::
+games:*:20094:0:99999:7:::
+man:*:20094:0:99999:7:::
+lp:*:20094:0:99999:7:::
+mail:*:20094:0:99999:7:::
+news:*:20094:0:99999:7:::
+uucp:*:20094:0:99999:7:::
+proxy:*:20094:0:99999:7:::
+www-data:*:20094:0:99999:7:::
+backup:*:20094:0:99999:7:::
+list:*:20094:0:99999:7:::
+irc:*:20094:0:99999:7:::
+_apt:*:20094:0:99999:7:::
+nobody:*:20094:0:99999:7:::
+systemd-network:!*:20094::::::
+systemd-timesync:!*:20094::::::
+dhcpcd:!:20094::::::
+messagebus:!:20094::::::
+syslog:!:20094::::::
+systemd-resolve:!*:20094::::::
+uuidd:!:20094::::::
+landscape:!:20094::::::
+polkitd:!*:20094::::::
+d111kc:$y$j9T$ozJT7Pr6nfn8l1rFCo.yW1$5XIWHKWz2GQrmbZiuLdyl/4ljpgRvYLb48NxTv5l5F/:20313:0:99999:7:::
+postgres:!:20337::::::
+postfix:!:20341::::::
+sshd:!:20341::::::
+```
 
 ### 5.3 用户和用户组管理的命令
+
 #### 5.3.1 用户的添加
+
 1. 命令格式:[root@localhost ~]# useradd [选项] 用户名｡
 2. 创建过程:
    - 系统读取/etc/login.defs 和/etc/default/useradd 配置文件;

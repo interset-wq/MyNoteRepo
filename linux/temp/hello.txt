@@ -1,0 +1,18 @@
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md*
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 h5/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:34 linux/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 math/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 other/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 powershell/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 python/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:30 reference/
