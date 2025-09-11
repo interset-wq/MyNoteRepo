@@ -154,7 +154,7 @@
 
 #### 3.3.1 Linux 命令的基本格式
 
-1. 打开shell 方式:"开始"菜单中选择应用程序-附件-终端,命令提示符格式:`[root@localhost ~]# `
+1. 打开shell 方式:"开始"菜单中选择应用程序-附件-终端,命令提示符格式:` `
    - `root`:当前登录用户;
    - `localhost`:当前系统的简写主机名(完整名localhost.localdommain);
    - `~`:用户当前所在目录;
@@ -275,12 +275,12 @@ RPM二进制包命名的一般格式如下：`包名-版本号-发布次数.发�
    - 命令格式: `rpm 选项 查询对象`
    - 常用选项:
      - -q 包名:查询是否安装(querry);
-     - -qa:查询所有已安装软件包(可搭配管道符,如[root@localhost ~]# rpm -qa | grep httpd);
+     - -qa:查询所有已安装软件包(可搭配管道符,如 rpm -qa | grep httpd);
      - -qi 包名:查询已安装软件包的详细信息(-i:information);
      - -qip 包全名:查询未安装软件包的详细信息(-p:package,需指定绝对路径+包全名);
      - -ql 包名:查询已安装软件包包含的所有文件及安装位置(-l:list);
      - -qlp 包全名:查询未安装软件包包含的文件及计划安装路径;
-     - -qf 系统文件名:反向查询文件所属的RPM 包(-f:file,仅RPM 安装的文件可用),如[root@localhost ~]# rpm -qf /bin/ls｡
+     - -qf 系统文件名:反向查询文件所属的RPM 包(-f:file,仅RPM 安装的文件可用),如 rpm -qf /bin/ls｡
 
 ## 第4章 shell 脚本编程基础
 
@@ -410,9 +410,9 @@ hello linux
   - 标准输出(stdout):1;
   - 错误输出(stderr):2;
 - 示例:
-  - [root@localhost ~]# grep li si file 2> errfile(将错误输出写入errfile);
-  - [root@localhost ~]# grep li si file > file1 2>&1(正确和错误输出均写入file1,注意2>& 之间无空格);
-  - [root@localhost ~]# ls -l > /dev/null(输出重定向到/dev/null,数据被丢弃,无法恢复)｡
+  -  grep li si file 2> errfile(将错误输出写入errfile);
+  -  grep li si file > file1 2>&1(正确和错误输出均写入file1,注意2>& 之间无空格);
+  -  ls -l > /dev/null(输出重定向到/dev/null,数据被丢弃,无法恢复)｡
 
 #### 4.2.4 命令执行操作符
 
@@ -519,63 +519,73 @@ sshd:!:20341::::::
 
 #### 5.3.1 用户的添加
 
-1. 命令格式:[root@localhost ~]# useradd [选项] 用户名｡
+1. 命令格式: `useradd 用户名`
 2. 创建过程:
    - 系统读取/etc/login.defs 和/etc/default/useradd 配置文件;
    - 在/etc/passwd､/etc/shadow､/etc/group､/etc/gshadow 文件中添加用户数据;
    - 在/etc/default/useradd 设定目录下建立用户主目录;
    - 复制/etc/skel 目录所有文件到用户主目录｡
-3. /etc/passwd 文件结构:每行7 个字段,格式为"用户名:密码:UID:GID:描述性信息:主目录:默认shell"
+3. /etc/passwd 文件结构:每行7 个字段,格式为"用户名:密码:UID:GID:描述性信息:主目录:默认shell"，例如 `root:x:0:0:root:/root:/bin/bash`
    - 用户名:字符序列;
    - 密码:x 表示设密码,实际密码存于/etc/shadow;
    - UID:取值0-65535(0 为root,1-499 为系统用户,500+为普通用户);
    - GID:初始组仅1 个,附加组可多个;
-   - 主目录:root 主目录为/root,普通用户主目录为/home/用户名;
-   - 默认shell:一般为/bin/bash｡
+   - 主目录:root 主目录为 `/root`,普通用户主目录为`/home/用户名`;
+   - 默认shell:一般为`/bin/bash`｡
+
+
 
 #### 5.3.2 密码配置命令
-1. 命令格式:passwd [选项] 用户名｡
+
+1. 命令格式: `passwd 用户名`
 2. 权限规则:
    - 普通用户:仅能修改自己的密码;
    - 超级用户(root):可修改自己和其他用户的密码｡
 
 #### 5.3.3 修改用户信息命令
-1. 命令格式:[root@localhost ~]# usermod [选项] 用户名｡
+
+1. 命令格式: `usermod [选项] 用户名`
 2. 常用选项:
    - -L:临时锁定用户(Lock);
    - -U:解锁用户(Unlock)｡
 
 #### 5.3.4 修改用户密码状态命令
-1. 命令格式:[root@localhost ~]# change [选项] 用户名｡
+
+命令格式: `change 用户名`
 
 #### 5.3.5 删除用户命令
-1. 命令格式:[root@localhost ~]# userdel -r 用户名(仅root 可用)｡
+
+1. 命令格式: `userdel -r 用户名` (仅root 可用)｡
 2. 选项含义:-r:删除用户的同时删除其家目录｡
 3. 用户个人文件路径:
    - 主目录:/home/用户名;
    - 邮箱:/var/spool/mail/用户名｡
 
 #### 5.3.7 用户间切换命令
-1. 命令格式:[root@localhost ~]# su [选项] 用户名｡
+
+1. 命令格式: `su [-] 用户名`
 2. 选项含义:
-   - -:切换用户身份的同时,切换工作环境(包括PATH 变量､MAIL 变量等);省略用户名时,默认切换为root;
-   - 无-:仅临时切换身份,不切换环境变量｡
+   - `-`:切换用户身份的同时,切换工作环境(包括PATH 变量､MAIL 变量等);省略用户名时,默认切换为root
 
 #### 5.3.8 用户组管理命令
-1. 添加用户组:[root@localhost ~]# groupadd [选项] 组名｡
-2. 修改用户组信息:[root@localhost ~]# groupmod [选项] 组名｡
-3. 删除用户组:[root@localhost ~]# groupdel 组名(仅删除非用户初始组的组)｡
-4. 组管理员设置(代替root 管理组):[root@localhost ~]# gpasswd [选项] 组名
+
+1. 添加用户组: `groupadd [选项] 组名`
+2. 修改用户组信息: `groupmod [选项] 组名`
+3. 删除用户组:`groupdel 组名`(仅删除非用户初始组的组)
+4. 组管理员设置(代替root 管理组): `gpasswd [选项] 组名`
    - 无选项:为组设置密码(仅root 可用);
    - -a user:将user 用户加入组;
    - -d user:将user 用户从组移除｡
 
 ## 第6章 文件管理
+
 ### 6.1 文件系统
+
 1. 文件定义:文件系统中存储数据的命名对象,是用户最小的逻辑存储单元｡
 2. Linux 文件系统结构:所有文件和目录组织成从根节点"/"开始的倒置树状结构,按名访问文件｡
 
 #### 6.1.2 文件结构和类型
+
 1. 文件组成:所有文件由数据项和文件控制块(索引节点)组成｡
 2. 文件分类:
    - 按数据项结构:无结构文件(字符流文件)､有结构文件(如目录文件);
@@ -585,52 +595,110 @@ sshd:!:20341::::::
    - 相对路径:相对于当前路径的文件/目录名称｡
 
 ### 6.2 文件与目录操作
+
 #### 6.2.1 文件操作命令
+
 ##### 6.2.1.1 cat 命令
+
 1. 功能:显示文件内容或连接合并文件｡
 2. 命令格式:
-   - 显示内容:[root@localhost ~]# cat [选项] 文件名;
-   - 合并文件:[root@localhost ~]# cat 文件1 文件2 > 文件3(覆盖文件3 内容,不存在则创建)｡
+   - 显示内容: `cat [选项] 文件名`
+   - 合并文件: `cat 文件1 文件2 > 文件3`(覆盖文件3 内容,不存在则创建)｡
 3. 常用选项:
    - -n:对输出的所有行编号;
    - -b:仅对非空行编号｡
 
 ##### 6.2.1.2 more 命令
-1. 功能:分页显示文本文件内容｡
-2. 命令格式:[root@localhost ~]# more [选项] 文件名｡
+
+1. 功能:分页显示文本文件内容，空格键翻页｡
+2. 命令格式: `more 文件名`
 
 ##### 6.2.1.3 head 命令
+
 1. 功能:显示文件的前若干行内容｡
-2. 命令格式:[root@localhost ~]# head [选项] 文件名｡
-3. 选项:-n k:显示前k 行内容(默认显示10 行)｡
+2. 命令格式: `head [选项] 文件名`
+3. 选项:`-n k`:显示前k 行内容(默认显示10 行)｡
+
+``` bash
+$ more hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md*
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 h5/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:34 linux/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 math/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 other/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 powershell/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 python/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:30 reference/
+$ head -n 2 hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+$ head hello.txt 
+total 0
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:40 ./
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 10 19:27 ../
+drwxrwxrwx 1 d111kc d111kc 4096 Sep 11 09:31 .git/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 .vscode/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 JavaScript/
+-rwxrwxrwx 1 d111kc d111kc   29 Aug 13 11:52 README.md*
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 algo/
+drwxrwxrwx 1 d111kc d111kc 4096 Sep  6 20:45 c/
+drwxrwxrwx 1 d111kc d111kc 4096 Aug 25 21:53 english/
+```
 
 ##### 6.2.1.4 tail 命令
+
 1. 功能:查看文件末尾的数据｡
-2. 命令格式:[root@localhost ~]# tail [选项] 文件名｡
+2. 命令格式: `tail [选项] 文件名`
 3. 选项:
-   - -n k:显示后k 行内容;
-   - -f:监听文件新增内容(中止按Ctrl+C)｡
+   - `-n k`:显示后k 行内容;
+   - `-f`:监听文件新增内容(中止按Ctrl+C)｡
 
 ##### 6.2.1.5 touch 命令
+
 1. 功能:创建文件或修改文件时间参数｡
-2. 命令格式:[root@localhost ~]# touch [选项] 文件名｡
+2. 命令格式: `touch [选项] 文件名`
 3. 选项:-a:仅修改文件访问时间｡
 
 ##### 6.2.1.6 grep 命令
+
 1. 功能:在一个或多个文件中搜索特定字符模式(正则表达式),模式可为字符､字符串､单词或句子｡
 2. 正则表达式基础(与通配符含义不同):
-   - c*:匹配0 个或多个字符c;
-   - .:匹配任意一个字符;
-   - [xyz]:匹配方括号中任意一个字符;
-   - [^xyz]:匹配方括号中字符外的所有字符;
-   - ^:行首定位符;
-   - $:行尾定位符｡
-3. 命令格式:[root@localhost ~]# grep [选项] 模式文件名｡
+   - `c*`:匹配0 个或多个字符c;
+   - `.`:匹配任意一个字符;
+   - `[xyz]`:匹配方括号中任意一个字符;
+   - `[^xyz]`:匹配方括号中字符外的所有字符;
+   - `^`:行首定位符;
+   - `$`:行尾定位符｡
+3. 命令格式: `grep [选项] 文件名`
 4. 常用选项:-n:在每一行最前面列出行号｡
 
+``` bash
+$ cat file3
+hello
+world
+hello linux
+$ grep world file3
+world
+$ grep linux file3
+hello linux
+$ cat file3 | grep linux
+hello linux
+```
+
 ##### 6.2.1.7 sed 命令
+
 1. 功能:自动编辑一个或多个文件,简化文件反复操作,编写转换程序｡
-2. 命令格式:[root@localhost ~]# sed [选项] sed 命令文件名｡
+2. 命令格式: sed [选项] sed 命令文件名｡
 3. 选项:
    - -n:仅显示匹配处理的行;
    - -e:执行多个编辑命令(一般用";"代替);
@@ -647,21 +715,23 @@ sshd:!:20341::::::
    - s:字符串替换(匹配正则表达式,substitution)｡
 
 ##### 6.2.1.8 awk 命令
+
 1. 功能:格式化文本,进行复杂格式处理,擅长处理文本文件中的数据｡
-2. 命令格式:[root@localhost ~]# awk [选项] ‘匹配规则|执行命令|’ 文件名｡
+2. 命令格式: awk [选项] ‘匹配规则|执行命令|’ 文件名｡
 3. 数据字段变量(默认以空白字符为分隔符):
    - $0:代表整个文本行;
    - $1:代表第1 个数据字段;
    - $2:代表第2 个数据字段;
    - $n:代表第n 个数据字段｡
-4. 自定义分隔符:用-F 选项指定,如[root@localhost ~]# awk -F ',' '{print $1}' file｡
+4. 自定义分隔符:用-F 选项指定,如 awk -F ',' '{print $1}' file｡
 5. 示例:
-   - [root@localhost ~]# awk '{print $1}' file(打印每行第1 个字段);
-   - [root@localhost ~]# awk 'BEGIN {print "The File Contents:"} {print $0} END {print "End of File"}' file(添加文件首尾提示)｡
+   -  awk '{print $1}' file(打印每行第1 个字段);
+   -  awk 'BEGIN {print "The File Contents:"} {print $0} END {print "End of File"}' file(添加文件首尾提示)｡
 
 ##### 6.2.1.9 cp 命令
+
 1. 功能:复制文件和目录,支持复制整个目录｡
-2. 命令格式:[root@localhost ~]# cp [选项] 源文件目标文件｡
+2. 命令格式: `cp [选项] 源文件 目标文件`
 3. 常用选项:
    - -a:相当于-d､-p､-r 选项的集合;
    - -d:源文件为软链接时,复制的目标文件也为软链接;
@@ -670,22 +740,38 @@ sshd:!:20341::::::
    - -s:创建源文件的软链接(非复制文件);
    - -p:复制后保留原文件属性;
    - -r:递归复制(用于复制目录)｡
-4. 示例:
-   - 不改名复制到/tmp:[root@localhost ~]# cp file /tmp/;
-   - 改名复制:[root@localhost ~]# cp file /tmp/text;
-   - 提示覆盖:[root@localhost ~]# cp -i file /tmp/text｡
+
+``` bash
+$ ls
+file1  folder
+$ cp file1 folder
+$ find
+.
+./file1
+./folder
+./folder/file1
+$ cp file1 folder/file2
+$ find
+.
+./file1
+./folder
+./folder/file1
+./folder/file2
+```
 
 ##### 6.2.1.10 rm 命令
-1. 功能:永久性删除文件或目录｡
-2. 命令格式:[root@localhost ~]# rm [选项] 文件或目录｡
+
+1. 功能:永久性删除文件或目录，root用户谨慎使用这个命令｡
+2. 命令格式: `rm [选项] 文件或目录`
 3. 常用选项:
    - -f:强制删除(force);
    - -i:删除前询问;
    - -r:递归删除(用于删除目录,含目录内所有内容)｡
 
 ##### 6.2.1.11 mv 命令
+
 1. 功能:移动文件/目录,或对文件/目录重命名｡
-2. 命令格式:[root@localhost ~]# mv [选项] 源文件目标文件｡
+2. 命令格式: `mv [选项] 源文件 目标文件`
 3. 常用选项:
    - -f:强制覆盖;
    - -i:目标文件存在时,询问是否覆盖(默认);
@@ -694,10 +780,12 @@ sshd:!:20341::::::
    - -u:目标文件存在且源文件更新时,升级目标文件｡
 
 ##### 6.2.1.12 sort 命令
+
 1. 功能:对文本排序,默认按ASCII 码值升序输出｡
 2. 常用选项:-r:反向排序｡
 
 ##### 6.2.1.13 wc 命令
+
 1. 功能:统计文本的行数､单词数或字符数｡
 2. 常用选项:
    - -l:仅统计行数;
@@ -705,46 +793,54 @@ sshd:!:20341::::::
    - -m:仅统计字符数｡
 
 #### 6.2.2 目录操作命令
+
 ##### 6.2.2.1 mkdir 命令
+
 1. 功能:创建目录(make directories)｡
-2. 命令格式:[root@localhost ~]# mkdir [选项] 目录名｡
+2. 命令格式: `mkdir [选项] 目录名`
 3. 常用选项:
    - -m:手动配置目录权限(不使用默认权限);
    - -p:递归创建所有目录(如创建多级目录)｡
 
 ##### 6.2.2.2 rmdir 命令
+
 1. 功能:删除空目录｡
 2. 常用选项:-p:递归删除空目录｡
 
 ##### 6.2.2.3 cd 命令
+
 1. 功能:切换工作目录(change directory)｡
 2. 特殊符号含义:
    - ~:代表当前登录用户的主目录;
    - -:代表上次所在目录;
    - .:代表当前目录;
    - ..:代表上级目录｡
-3. 示例:cd ~(回到用户主目录)｡
 
 ##### 6.2.2.4 pwd 命令
-1. 功能:显示当前所在目录(print working directory)｡
+
+功能:显示当前所在目录(print working directory)｡
 
 ##### 6.2.2.5 ls 命令
+
 1. 功能:显示当前目录下的内容｡
 2. 默认行为:仅显示非隐藏文件名称,按文件名排序｡
 3. 常用选项:-a:显示全部文件(包括开头为"."的隐藏文件)｡
 
 ##### 6.2.2.6 ln 命令
+
 1. 功能:创建链接文件｡
-2. 命令格式:[root@localhost ~]# ln [选项] 源文件目标文件｡
+2. 命令格式: `ln [选项] 源文件 目标文件`
 3. 选项:-s:创建软链接(不加则创建硬链接)｡
 4. 硬链接与软链接的区别:
    - 硬链接:修改源文件或硬链接,另一方数据均改变;不能跨文件系统(分区)建立,不能链接目录;
    - 软链接:相当于快捷方式;可跨分区,可链接目录;若删除源文件,软链接无法访问数据｡
 
 ### 6.3 访问权限管理
-1. 查看权限命令:ls -al(显示文件和目录的权限信息)｡
+
+查看权限命令:`ls -al`(显示文件和目录的权限信息)
 
 #### 6.3.2 权限位
+
 1. 权限类型:对文件的读(r)､写(w)､执行(x)权限｡
 2. 权限位格式:共10 位,第1 位表示文件类型,后9 位分3 组(每组3 位),分别对应所有者(u)､所属组(g)､其他人(o)的权限｡
 
@@ -835,8 +931,8 @@ sshd:!:20341::::::
    - root 用户:可设定NI 为负值,并调整任何用户的进程;
    - 默认NI 值:0｡
 3. 调整优先级的命令:
-   - nice 命令:给待启动的进程赋予NI 值,不能修改已运行进程｡格式:[root@localhost ~]# nice [-n NI 值] 命令;
-   - renice 命令:修改已运行进程的NI 值｡格式:[root@localhost ~]# renice [优先级] PID｡
+   - nice 命令:给待启动的进程赋予NI 值,不能修改已运行进程｡格式: nice [-n NI 值] 命令;
+   - renice 命令:修改已运行进程的NI 值｡格式: renice [优先级] PID｡
 
 ## 第8章 存储管理
 ### 8.1 存储设备的查看
@@ -860,10 +956,10 @@ sshd:!:20341::::::
 
 ##### 8.1.3.1 mount 命令
 1. 查看挂载信息:
-   - [root@localhost ~]# mount:显示已挂载设备信息;
-   - [root@localhost ~]# mount -l:额外显示卷标名称｡
-2. 自动挂载遗漏设备:[root@localhost ~]# mount -a:检查/etc/fstab 文件,自动挂载未挂载设备(/etc/fstab 为系统开机自动挂载配置文件)｡
-3. 手动挂载格式:[root@localhost ~]# mount [-t 系统类型] [-L 卷标名] [-o 特殊选项] [-n] 设备文件名 挂载点｡
+   -  mount:显示已挂载设备信息;
+   -  mount -l:额外显示卷标名称｡
+2. 自动挂载遗漏设备: mount -a:检查/etc/fstab 文件,自动挂载未挂载设备(/etc/fstab 为系统开机自动挂载配置文件)｡
+3. 手动挂载格式: mount [-t 系统类型] [-L 卷标名] [-o 特殊选项] [-n] 设备文件名 挂载点｡
    - 选项含义:
      - -t 系统类型:指定文件系统类型(如EXT2､EXT3､EXT4､iso9660､vfat);
      - -L 卷标名:通过卷标名挂载(替代设备文件名);
@@ -875,12 +971,12 @@ sshd:!:20341::::::
 
 ##### 8.1.3.3 具体设备挂载示例
 1. 挂载光盘:
-   - 创建挂载点:[root@localhost ~]# mkdir /mnt/cdrom/;
-   - 挂载命令:[root@localhost ~]# mount /dev/cdrom /mnt/cdrom/｡
+   - 创建挂载点: mkdir /mnt/cdrom/;
+   - 挂载命令: mount /dev/cdrom /mnt/cdrom/｡
 2. 挂载U盘:
-   - 查看设备文件名:[root@localhost ~]# fdisk -l(假设为sda1);
-   - 创建挂载点:[root@localhost ~]# mkdir /mnt/usb;
-   - 挂载命令:[root@localhost ~]# mount -t vfat /dev/sda1 /mnt/usb/｡
+   - 查看设备文件名: fdisk -l(假设为sda1);
+   - 创建挂载点: mkdir /mnt/usb;
+   - 挂载命令: mount -t vfat /dev/sda1 /mnt/usb/｡
 3. 自动挂载配置:root 身份在/etc/fstab 文件中添加设备信息,实现开机自动挂载｡
 
 ### 8.2 分区管理
@@ -889,8 +985,8 @@ sshd:!:20341::::::
    - parted:支持大于2TB 的分区,也可分配小分区｡
 
 #### 8.2.1 fdisk 命令
-1. 查询硬盘和分区:[root@localhost ~]# fdisk -l｡
-2. 给硬盘分区:[root@localhost ~]# fdisk 设备文件名(注意:不要在当前系统硬盘上尝试,会删除系统)｡
+1. 查询硬盘和分区: fdisk -l｡
+2. 给硬盘分区: fdisk 设备文件名(注意:不要在当前系统硬盘上尝试,会删除系统)｡
 3. 建立主分区过程:fdisk 硬盘名→n(新建)→p(建立主分区)→l(指定分区号)→按Enter(默认从柱面1 开始)→+5G(指定分区大小)｡
 4. 分区规则:
    - 主分区+扩展分区最多4 个;
@@ -901,7 +997,7 @@ sshd:!:20341::::::
    - 不重启刷新分区表:partprobe 命令｡
 
 #### 8.2.2 parted 命令
-1. 交互模式进入:[root@localhost ~]# parted 硬盘设备文件名｡
+1. 交互模式进入: parted 硬盘设备文件名｡
 2. 交互模式帮助:输入help 查看支持的命令｡
 3. 格式化限制:parted 交互命令格式化仅支持ext2 文件系统,其他格式需用系统mkfs 命令｡
 4. 注意事项:parted 所有操作立即生效,无需保存｡
@@ -909,7 +1005,7 @@ sshd:!:20341::::::
 ### 8.3 磁盘管理工具
 #### 8.3.1 df 命令
 1. 功能:显示Linux 系统中各文件系统的硬盘使用情况(总容量､已用容量､剩余容量等),数据来源于超级块(Super Block)｡
-2. 命令格式:[root@localhost ~]# df [选项] [目录或文件名]｡
+2. 命令格式: df [选项] [目录或文件名]｡
 3. 常用选项:
    - -a:显示所有文件系统信息(包括/proc､/sysfs 等);
    - -h:用MB/GB 等习惯单位显示;
@@ -919,7 +1015,7 @@ sshd:!:20341::::::
 
 #### 8.3.2 du 命令
 1. 功能:统计目录或文件所占磁盘空间容量｡
-2. 命令格式:[root@localhost ~]# du [选项] [目录或文件名]｡
+2. 命令格式: du [选项] [目录或文件名]｡
 3. 常用选项:
    - -a:显示所有子目录和子文件的磁盘占用量;
    - -h:用习惯单位显示;
@@ -929,7 +1025,7 @@ sshd:!:20341::::::
 
 #### 8.3.3 fsck 命令
 1. 功能:检查文件系统并尝试修复错误｡
-2. 命令格式:[root@localhost ~]# fsck [选项] 分区设备文件名｡
+2. 命令格式: fsck [选项] 分区设备文件名｡
 3. 常用选项:
    - -a:自动修复,无提示;
    - -r:交互式修复,修改前询问用户｡
@@ -977,7 +1073,7 @@ sshd:!:20341::::::
 #### 9.2.2 查看内存信息的命令
 ##### 9.2.2.1 free 命令
 1. 功能:显示系统内存状态(空闲/已用物理内存､swap 内存､内核使用的缓冲区)｡
-2. 命令格式:[root@localhost ~]# free [选项]｡
+2. 命令格式: free [选项]｡
 3. 常用选项:
    - -k:以KB 为单位(默认);
    - -b:以字节为单位;
@@ -1111,18 +1207,18 @@ sshd:!:20341::::::
 #### 10.8.1 常用诊断命令
 ##### 10.8.1.1 ping 命令
 1. 功能:测试本机与远程主机的底层IP 连通性｡
-2. 用法:接受主机名或IP 地址作为参数,如[root@localhost ~]# ping www.baidu.com｡
+2. 用法:接受主机名或IP 地址作为参数,如 ping www.baidu.com｡
 
 ##### 10.8.1.2 host 命令
 1. 功能:直接执行DNS 查询｡
-2. 用法:默认使用/etc/resolv.conf 中的域名服务器,如[root@localhost ~]# host www.baidu.com｡
+2. 用法:默认使用/etc/resolv.conf 中的域名服务器,如 host www.baidu.com｡
 
 ##### 10.8.1.3 traceroute 命令
 1. 功能:显示数据包从本机到目标主机的路由器路径｡
 
 #### 10.8.2 tcpdump 命令
 1. 功能:监视网络,显示独立数据包信息概要,持续执行直到Ctrl+C 取消｡
-2. 示例:截取HTTP 协议(端口80)数据并以二进制格式保存到http.capture:[root@localhost ~]# tcpdump -p 80 > http.capture｡
+2. 示例:截取HTTP 协议(端口80)数据并以二进制格式保存到http.capture: tcpdump -p 80 > http.capture｡
 
 #### 10.8.3 常见网络配置问题与答案
 1. 列出所有当前活跃网络接口的命令:ifconfig｡
@@ -1155,7 +1251,6 @@ sshd:!:20341::::::
 ### 11.4 管理日志
 1. rsyslogd 服务配置文件:/etc/rsyslogd.conf,定义各服务不同等级日志的记录位置｡
 
-## 第三篇 应用篇
 ## 第12章 VI 编辑器
 ### 12.2 工作模式
 VI 编辑器有3 种工作模式:命令模式､文本编辑模式和末行模式｡
